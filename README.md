@@ -22,14 +22,20 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** - Community standards and expectations
 - **[CONTRIBUTING.md](./CONTRIBUTING.md)** - How to contribute (code and non-code)
 - **[CONTRIBUTORS.md](./CONTRIBUTORS.md)** - Contributor recognition and hall of fame
+- **[MENTORSHIP.md](./MENTORSHIP.md)** - Mentorship program and sacred reciprocity
 - **[SUPPORT.md](./SUPPORT.md)** - Getting help and support
 
 ### Organization
 - **[VISION_AND_ROADMAP.md](./VISION_AND_ROADMAP.md)** - Strategic vision and roadmap (2025-2032)
 - **[GOVERNANCE.md](./GOVERNANCE.md)** - Governance model and decision-making
 - **[SUSTAINABILITY.md](./SUSTAINABILITY.md)** - Funding model and sustainability plan
+- **[METRICS.md](./METRICS.md)** - Impact measurement and success metrics
 - **[SECURITY.md](./SECURITY.md)** - Security policy and vulnerability reporting
 - **[RESEARCH.md](./RESEARCH.md)** - Research publications and academic contributions
+
+### Development
+- **[ADR.md](./ADR.md)** - Architecture Decision Records framework
+- **[RELEASES.md](./RELEASES.md)** - Release process and versioning guidelines
 
 ### Repository Management
 - **[REPOSITORY_TOPICS.md](./REPOSITORY_TOPICS.md)** - Topic tags (discoverability-focused)
@@ -127,11 +133,12 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 29 files
-- **Community Health Files**: 5 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS)
+- **Total Documents**: 33 files (~150KB of professional content)
+- **Community Health Files**: 6 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
 - **Onboarding & Learning**: 4 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING)
-- **Strategic & Governance**: 5 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, RESEARCH, IMPROVEMENTS)
+- **Strategic & Governance**: 6 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS)
+- **Development Standards**: 2 (ADR, RELEASES)
 - **Repository Management**: 3 (TOPICS, TOPICS_ALIGNED, PINNED)
 
 ## 🌊 Our Philosophy
