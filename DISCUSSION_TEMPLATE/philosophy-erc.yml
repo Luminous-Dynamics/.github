@@ -1,0 +1,96 @@
+title: "[Philosophy]: "
+labels: ["philosophy", "erc"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🌊 Philosophy & ERC Discussion
+
+        Welcome to our space for exploring consciousness-first principles, Evolving Resonant Co-creationism (ERC), and the Meta-Principle of Infinite Love.
+
+        *"In unity we code, in love we debug, in consciousness we deploy"* ✨
+
+  - type: dropdown
+    id: topic-area
+    attributes:
+      label: Philosophical Topic Area
+      description: Which area does your discussion focus on?
+      options:
+        - ERC Principles & Framework
+        - Meta-Principle of Infinite Love
+        - Consciousness-First Technology
+        - Sacred Development Practices
+        - Gift Economy & Reciprocity
+        - Regenerative Economics
+        - Human-AI Co-evolution
+        - Ethical Technology Design
+        - Community Governance
+        - Other Philosophical Inquiry
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Philosophical Question or Topic
+      description: What would you like to explore or discuss?
+      placeholder: Share your philosophical inquiry, reflection, or insight...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reflection
+    attributes:
+      label: Your Thoughts & Reflections
+      description: What are your current thoughts on this topic?
+      placeholder: Share your perspective, experiences, or contemplations...
+    validations:
+      required: false
+
+  - type: textarea
+    id: application
+    attributes:
+      label: Practical Application
+      description: How might this apply to our technology or community?
+      placeholder: Connect philosophy to practice...
+    validations:
+      required: false
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Related Resources
+      description: Any relevant readings, references, or prior discussions?
+      placeholder: Links to related content, philosophical traditions, etc.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: intent
+    attributes:
+      label: Discussion Intent
+      description: What are you hoping to gain from this discussion?
+      options:
+        - Deepen understanding
+        - Explore new perspectives
+        - Resolve a tension or paradox
+        - Apply philosophy to practice
+        - Share an insight
+        - Build collective wisdom
+        - Other
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agreements
+    attributes:
+      label: Philosophical Dialogue Agreements
+      options:
+        - label: I approach this with openness and curiosity
+          required: false
+        - label: I honor diverse perspectives and lived experiences
+          required: false
+        - label: I seek understanding over being right
+          required: false
+        - label: I agree to follow our [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+          required: true

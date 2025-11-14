@@ -1,0 +1,160 @@
+title: "[Proposal]: "
+labels: ["proposal", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🚀 New Project Proposal
+
+        Thank you for proposing a new project for Luminous Dynamics! We're excited to explore how this aligns with our consciousness-first mission.
+
+        *"In unity we code, in love we debug, in consciousness we deploy"* ✨
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: What would you like to call this project?
+      placeholder: my-awesome-project
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this project solve?
+      placeholder: Describe the issue or need this project addresses...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How will this project solve the problem?
+      placeholder: Describe your vision for the project...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pillar
+    attributes:
+      label: Strategic Pillar
+      description: Which strategic pillar does this align with?
+      options:
+        - Consciousness Infrastructure
+        - Trust & Decentralization
+        - Energy Democratization
+        - Accessibility & Tools
+        - Gift Economy Infrastructure
+        - Research & Science
+        - Other / New Pillar
+    validations:
+      required: true
+
+  - type: textarea
+    id: erc-alignment
+    attributes:
+      label: ERC Alignment
+      description: How does this project align with our consciousness-first principles?
+      placeholder: |
+        Explain how this serves:
+        - Consciousness-First: Preserving awareness
+        - Radical Accessibility: Serving all beings
+        - Regenerative Economics: Community benefit
+        - Sacred Development: Intentional creation
+        - Gift Economy: Reciprocity over extraction
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tech-stack
+    attributes:
+      label: Proposed Technology Stack
+      description: What technologies would this use?
+      multiple: true
+      options:
+        - Python
+        - Rust
+        - TypeScript/JavaScript
+        - Nix/NixOS
+        - Holochain
+        - Other (please specify in description)
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Project Scope
+      description: What would be included in the initial version?
+      placeholder: List key features and boundaries...
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources Needed
+      description: What resources would this project require?
+      placeholder: |
+        Consider:
+        - Developer time
+        - Infrastructure/hosting
+        - External services or APIs
+        - Community expertise
+        - Funding
+    validations:
+      required: false
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Proposed Timeline
+      description: What timeline do you envision for this project?
+      placeholder: |
+        Example:
+        - Phase 1 (3 months): Core functionality
+        - Phase 2 (6 months): Community testing
+        - Phase 3 (12 months): Production ready
+    validations:
+      required: false
+
+  - type: dropdown
+    id: commitment
+    attributes:
+      label: Your Commitment
+      description: How will you contribute to this project?
+      options:
+        - I will lead the development
+        - I will contribute code
+        - I will provide design/UX
+        - I will help with documentation
+        - I will support/advise
+        - I'm proposing but cannot contribute directly
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Anything else we should know?
+      placeholder: Links, research, related projects, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Proposal Checklist
+      options:
+        - label: I have searched for similar projects to avoid duplication
+          required: true
+        - label: This proposal aligns with ERC principles
+          required: true
+        - label: I have considered the resource requirements
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+          required: true

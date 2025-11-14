@@ -16,16 +16,20 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[GETTING_STARTED.md](./GETTING_STARTED.md)** - Complete newcomer onboarding guide
 - **[FAQ.md](./FAQ.md)** - Frequently asked questions
 - **[GLOSSARY.md](./GLOSSARY.md)** - Terminology and concepts explained
+- **[LEARNING.md](./LEARNING.md)** - Learning paths and educational resources
 
 ### Community
 - **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** - Community standards and expectations
 - **[CONTRIBUTING.md](./CONTRIBUTING.md)** - How to contribute (code and non-code)
+- **[CONTRIBUTORS.md](./CONTRIBUTORS.md)** - Contributor recognition and hall of fame
 - **[SUPPORT.md](./SUPPORT.md)** - Getting help and support
 
 ### Organization
 - **[VISION_AND_ROADMAP.md](./VISION_AND_ROADMAP.md)** - Strategic vision and roadmap (2025-2032)
 - **[GOVERNANCE.md](./GOVERNANCE.md)** - Governance model and decision-making
+- **[SUSTAINABILITY.md](./SUSTAINABILITY.md)** - Funding model and sustainability plan
 - **[SECURITY.md](./SECURITY.md)** - Security policy and vulnerability reporting
+- **[RESEARCH.md](./RESEARCH.md)** - Research publications and academic contributions
 
 ### Repository Management
 - **[REPOSITORY_TOPICS.md](./REPOSITORY_TOPICS.md)** - Topic tags (discoverability-focused)
@@ -35,7 +39,9 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 
 ### GitHub Integration
 - **[FUNDING.yml](./FUNDING.yml)** - Sponsorship and support links
-- **[ISSUE_TEMPLATE/](./ISSUE_TEMPLATE/)** - Issue templates (bug, feature, question)
+- **[workflows/](./workflows/)** - GitHub Actions automation (greetings, stale issues, labels)
+- **[ISSUE_TEMPLATE/](./ISSUE_TEMPLATE/)** - Issue templates (bug, feature, question, config)
+- **[DISCUSSION_TEMPLATE/](./DISCUSSION_TEMPLATE/)** - Discussion templates (general, proposal, philosophy)
 - **[PULL_REQUEST_TEMPLATE.md](./PULL_REQUEST_TEMPLATE.md)** - PR template with ERC alignment
 
 ## 🚀 Main Projects
@@ -82,38 +88,50 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ```
 .github/
 ├── profile/
-│   └── README.md              # Organization profile page
+│   └── README.md                    # Organization profile page
+├── workflows/
+│   ├── greetings.yml               # Welcome new contributors
+│   ├── stale.yml                   # Stale issue/PR management
+│   └── label-checker.yml           # PR label suggestions
 ├── ISSUE_TEMPLATE/
-│   ├── bug_report.yml        # Bug report template
-│   ├── feature_request.yml   # Feature request template
-│   ├── question.yml          # Question template
-│   └── config.yml            # Issue config with quick links
-├── CODE_OF_CONDUCT.md        # Community standards
-├── CONTRIBUTING.md           # Contribution guidelines
-├── FAQ.md                    # Frequently asked questions
-├── FUNDING.yml               # GitHub Sponsors configuration
-├── GETTING_STARTED.md        # Newcomer onboarding
-├── GLOSSARY.md               # Terminology guide
-├── GOVERNANCE.md             # Governance model
-├── IMPROVEMENTS_SUMMARY.md   # Changelog of improvements
-├── LICENSE                   # CC-BY-SA 4.0
-├── PINNED_REPOSITORIES.md    # Curation recommendations
-├── PULL_REQUEST_TEMPLATE.md  # PR template
-├── README.md                 # This file
-├── REPOSITORY_TOPICS.md      # Discoverability-focused topics
-├── REPOSITORY_TOPICS_ALIGNED.md # ERC-focused topics
-├── SECURITY.md               # Security policy
-├── SUPPORT.md                # Support guide
-└── VISION_AND_ROADMAP.md     # Strategic vision
+│   ├── bug_report.yml              # Bug report template
+│   ├── feature_request.yml         # Feature request template
+│   ├── question.yml                # Question template
+│   └── config.yml                  # Issue config with quick links
+├── DISCUSSION_TEMPLATE/
+│   ├── general.yml                 # General discussions
+│   ├── project-proposal.yml        # New project proposals
+│   └── philosophy-erc.yml          # Philosophy & ERC discussions
+├── CODE_OF_CONDUCT.md              # Community standards
+├── CONTRIBUTING.md                 # Contribution guidelines
+├── CONTRIBUTORS.md                 # Contributor recognition
+├── FAQ.md                          # Frequently asked questions
+├── FUNDING.yml                     # GitHub Sponsors configuration
+├── GETTING_STARTED.md              # Newcomer onboarding
+├── GLOSSARY.md                     # Terminology guide
+├── GOVERNANCE.md                   # Governance model
+├── IMPROVEMENTS_SUMMARY.md         # Changelog of improvements
+├── LEARNING.md                     # Learning paths & education
+├── LICENSE                         # CC-BY-SA 4.0
+├── PINNED_REPOSITORIES.md          # Curation recommendations
+├── PULL_REQUEST_TEMPLATE.md        # PR template
+├── README.md                       # This file
+├── REPOSITORY_TOPICS.md            # Discoverability-focused topics
+├── REPOSITORY_TOPICS_ALIGNED.md    # ERC-focused topics
+├── RESEARCH.md                     # Research & publications
+├── SECURITY.md                     # Security policy
+├── SUPPORT.md                      # Support guide
+├── SUSTAINABILITY.md               # Funding & sustainability model
+└── VISION_AND_ROADMAP.md           # Strategic vision (2025-2032)
 ```
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 20 files
-- **Community Health Files**: 4 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT)
-- **Issue Templates**: 4 (bug, feature, question, config)
-- **Onboarding Guides**: 3 (GETTING_STARTED, FAQ, GLOSSARY)
-- **Strategic Docs**: 3 (VISION_AND_ROADMAP, GOVERNANCE, IMPROVEMENTS_SUMMARY)
+- **Total Documents**: 29 files
+- **Community Health Files**: 5 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS)
+- **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
+- **Onboarding & Learning**: 4 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING)
+- **Strategic & Governance**: 5 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, RESEARCH, IMPROVEMENTS)
 - **Repository Management**: 3 (TOPICS, TOPICS_ALIGNED, PINNED)
 
 ## 🌊 Our Philosophy

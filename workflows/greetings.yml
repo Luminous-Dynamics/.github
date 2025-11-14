@@ -1,0 +1,65 @@
+name: Greet New Contributors
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            🌟 Welcome to Luminous Dynamics!
+
+            Thank you for opening your first issue. We're excited to have you in our consciousness-first technology community!
+
+            **What happens next:**
+            - A maintainer will review your issue within 48-72 hours
+            - We may ask clarifying questions to better understand your needs
+            - You'll be notified of any updates via GitHub notifications
+
+            **While you wait:**
+            - Check out our [Contributing Guide](https://github.com/Luminous-Dynamics/.github/blob/main/CONTRIBUTING.md)
+            - Review our [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+            - Join our [Discussions](https://github.com/orgs/Luminous-Dynamics/discussions) to connect with the community
+
+            **Resources:**
+            - 📖 [Documentation](https://docs.luminousdynamics.org)
+            - 💬 [FAQ](https://github.com/Luminous-Dynamics/.github/blob/main/FAQ.md)
+            - 🙏 [Support Guide](https://github.com/Luminous-Dynamics/.github/blob/main/SUPPORT.md)
+
+            *"In unity we code, in love we debug, in consciousness we deploy"* ✨
+
+          pr-message: |
+            🎉 Congratulations on your first pull request to Luminous Dynamics!
+
+            Thank you for contributing to consciousness-first technology. Your participation in our gift economy helps build a better technological future for all beings.
+
+            **What happens next:**
+            - A maintainer will review your PR within 2-5 days
+            - We'll provide constructive feedback and guidance
+            - Once approved, your contribution will be merged and celebrated!
+
+            **Review checklist:**
+            - [ ] Have you filled out the PR template completely?
+            - [ ] Have you tested your changes locally?
+            - [ ] Does your PR align with our [ERC principles](https://github.com/Luminous-Dynamics/evolving-resonant-cocreationism)?
+            - [ ] Have you updated relevant documentation?
+
+            **Resources for contributors:**
+            - 📝 [Contributing Guide](https://github.com/Luminous-Dynamics/.github/blob/main/CONTRIBUTING.md)
+            - 🌊 [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+            - 🚀 [Getting Started](https://github.com/Luminous-Dynamics/.github/blob/main/GETTING_STARTED.md)
+
+            Thank you for your sacred contribution! 💚
+
+            *"In unity we code, in love we debug, in consciousness we deploy"* ✨

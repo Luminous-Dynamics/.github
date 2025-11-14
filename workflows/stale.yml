@@ -1,0 +1,90 @@
+name: Mark Stale Issues and PRs
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Stale issue configuration
+          days-before-stale: 90
+          days-before-close: 30
+          stale-issue-message: |
+            🌊 This issue has been automatically marked as stale because it has not had recent activity for 90 days.
+
+            **What this means:**
+            - If this issue is still relevant, please comment to keep it open
+            - The issue will be closed in 30 days if no further activity occurs
+            - You can always reopen closed issues if they become relevant again
+
+            **Is this issue still important to you?**
+            - Add a comment explaining why it should remain open
+            - Provide updates on the status or any new information
+            - Let us know if you're working on it or need help
+
+            Thank you for contributing to Luminous Dynamics! 💚
+
+            *Operating on sacred time, not corporate deadlines*
+
+          close-issue-message: |
+            🍃 This issue has been automatically closed due to inactivity.
+
+            **This doesn't mean it's not important!**
+            - If this is still relevant, please reopen and add a comment
+            - We're happy to revisit any issue that serves our community
+            - Our gift economy operates on natural rhythms, not forced timelines
+
+            Thank you for your patience and understanding. ✨
+
+          stale-issue-label: 'stale'
+          exempt-issue-labels: 'pinned,security,roadmap,long-term'
+
+          # Stale PR configuration
+          days-before-pr-stale: 60
+          days-before-pr-close: 14
+          stale-pr-message: |
+            🌊 This pull request has been automatically marked as stale because it has not had recent activity for 60 days.
+
+            **What this means:**
+            - If you're still working on this, please comment to keep it open
+            - The PR will be closed in 14 days if no further activity occurs
+            - You can always reopen or submit a new PR later
+
+            **To keep this PR active:**
+            - Respond to any review comments
+            - Rebase on the latest main branch if needed
+            - Add a comment with an update on your progress
+            - Let us know if you need help or guidance
+
+            We value your contribution! 💚
+
+            *Sacred development happens at its own pace*
+
+          close-pr-message: |
+            🍃 This pull request has been automatically closed due to inactivity.
+
+            **Thank you for your contribution!**
+            - Your work is appreciated even if it wasn't merged
+            - Feel free to reopen if you'd like to continue
+            - You're welcome to submit a new PR anytime
+
+            We honor the energy you put into this. ✨
+
+          stale-pr-label: 'stale'
+          exempt-pr-labels: 'pinned,wip,blocked'
+
+          # General configuration
+          operations-per-run: 30
+          remove-stale-when-updated: true
+          ascending: true

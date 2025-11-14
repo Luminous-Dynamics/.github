@@ -1,0 +1,45 @@
+name: Check Labels on PRs
+
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  check-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for PR labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const labels = pr.labels.map(label => label.name);
+
+            // Helpful labels for categorization
+            const typeLabels = ['bug', 'enhancement', 'documentation', 'refactoring', 'performance'];
+            const hasTypeLabel = labels.some(label => typeLabels.includes(label));
+
+            if (!hasTypeLabel && pr.state === 'open') {
+              // Add a comment suggesting labels
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `👋 Thank you for your contribution!
+
+            **Suggested action:** Please add a label to categorize this PR:
+            - \`bug\` - Fixes an issue
+            - \`enhancement\` - Adds new functionality
+            - \`documentation\` - Documentation improvements
+            - \`refactoring\` - Code improvements without changing functionality
+            - \`performance\` - Performance improvements
+
+            This helps maintainers understand and prioritize your contribution. 💚
+
+            *Labels can be added by maintainers or by commenting:* \`/label enhancement\``
+              });
+            }

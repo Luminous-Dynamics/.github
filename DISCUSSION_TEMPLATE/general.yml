@@ -1,0 +1,55 @@
+title: "[Discussion]: "
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        💬 Welcome to Luminous Dynamics Discussions!
+
+        This is a space for open-ended conversations about our consciousness-first technology.
+
+        *"In unity we code, in love we debug, in consciousness we deploy"* ✨
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Discussion Category
+      description: What type of discussion is this?
+      options:
+        - General Discussion
+        - Ideas & Brainstorming
+        - Community Building
+        - Philosophy & ERC
+        - Technical Deep Dive
+        - Feedback & Suggestions
+        - Show & Tell
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic
+      description: What would you like to discuss?
+      placeholder: Share your thoughts, ideas, or questions...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Background
+      description: Provide any relevant context or background information
+      placeholder: Help others understand where you're coming from...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By participating, you agree to follow our community guidelines
+      options:
+        - label: I agree to follow the [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+          required: true
