@@ -36,23 +36,42 @@ ask-nix "install a web browser"  # It just works!
 **The Philosophical Foundation**
 Our consciousness-first philosophy exploring human-AI co-evolution, sacred reciprocity, and gift-economy models. The wisdom foundation underlying all our work.
 
-## 🌱 Additional Projects
+## 🌱 Mycelix Ecosystem
+
+### [📧 Mycelix Mail](https://github.com/Luminous-Dynamics/Mycleix-Mail)
+**Trust-Based Decentralized Email**
+Spam filtering through reputation, not surveillance. Uses MATL trust scores to evaluate senders before downloading messages. End-to-end encrypted with true data ownership on Holochain.
+
+### [🎵 Mycelix Music](https://github.com/Luminous-Dynamics/Mycelix-Music)
+**Decentralized Music Streaming**
+P2P music platform built on Holochain, empowering artists through direct fan connections and fair compensation.
+
+### [🛍️ Mycelix Marketplace](https://github.com/Luminous-Dynamics/Mycelix-Marketplace)
+**Decentralized P2P Marketplace**
+Community-driven commerce platform leveraging Holochain for trustless transactions and ethical trade.
+
+## 💚 Gift Economy & Tools
+
+### [💝 Infin Love](https://github.com/Luminous-Dynamics/infin-love)
+**Sacred Reciprocity Platform**
+Gift circles and reciprocal exchange based on generosity rather than transactions. Living demonstration of ERC gift economy principles.
+🔗 **Live**: [infin.love](https://infin.love)
 
 ### [⚡ Terra Lumina](https://github.com/Luminous-Dynamics/terra-lumina)
 **Regenerative Cities Investment**
 Pre-seed opportunity to build energy-abundant cities with affordable renewable energy in Iceland.
 
-### [🎵 Mycelix Music](https://github.com/Luminous-Dynamics/Mycelix-Music)
-**Decentralized Music Streaming**
-P2P music platform built on Holochain, empowering artists through direct fan connections.
-
-### [🛍️ Mycelix Marketplace](https://github.com/Luminous-Dynamics/Mycelix-Marketplace)
-**Decentralized P2P Marketplace**
-Community-driven commerce platform leveraging Holochain for trustless transactions.
+### [🪟 NSFW](https://github.com/Luminous-Dynamics/nsfw)
+**Nix Subsystem for Windows**
+Bridge to 70,000+ Nix packages on Windows via WSL2. 500-1000× faster package search with natural language interface. Solves version conflict hell.
 
 ### [🎨 Nixite](https://github.com/Luminous-Dynamics/nixite)
 **Visual Package Discovery for NixOS**
-Making NixOS package exploration intuitive and accessible through visual interfaces.
+Making NixOS package exploration intuitive through visual interfaces and accessible design.
+
+### [🤖 WebPilot](https://github.com/Luminous-Dynamics/webpilot)
+**Modern Browser Automation Framework**
+Professional web automation with Playwright. 63% faster execution, auto-waiting, multi-browser support. For testing, monitoring, and intelligent automation.
 
 ## 🌊 Our Philosophy
 

@@ -67,9 +67,37 @@ nixos, nix, package-manager, javascript, visualization,
 developer-tools, linux, ui-ux, package-discovery, web-app
 ```
 
+## Mycelix Ecosystem Extensions
+
+### 11. Mycleix-Mail
+```
+email, decentralized, holochain, privacy, spam-filter,
+rust, p2p, encryption, communication, trust-score
+```
+
+## Gift Economy & Developer Tools
+
+### 12. infin-love
+```
+gift-economy, community, reciprocity, html, erc,
+mutual-aid, alternative-economics, generosity, consciousness, exchange-platform
+```
+
+### 13. nsfw
+```
+nix, nixos, windows, wsl, package-manager,
+rust, cli, developer-tools, environment-management, cross-platform
+```
+
+### 14. webpilot
+```
+web-automation, playwright, python, testing, browser-automation,
+selenium-alternative, scraping, monitoring, qa-testing, ci-cd
+```
+
 ## Organization
 
-### 11. .github
+### 15. .github
 ```
 github-profile, organization, consciousness-technology, open-source,
 erc, community, documentation, meta, philosophy, coherence-as-a-service

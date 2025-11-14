@@ -66,7 +66,32 @@ nixos, package-discovery, visualization, user-interface, accessibility,
 nix-packages, developer-tools, javascript, package-manager, linux
 ```
 
-## 11. .github (Organization Profile)
+## 11. Mycleix-Mail
+```
+decentralized-email, holochain, matl, reputation-based, spam-filtering,
+end-to-end-encryption, privacy, rust, p2p-communication, trust-systems
+```
+
+## 12. infin-love
+```
+gift-economy, sacred-reciprocity, gift-circles, consciousness-first,
+community-exchange, erc, generosity, mutual-aid, alternative-economics,
+reciprocal-exchange
+```
+
+## 13. nsfw
+```
+nix, nixos, windows, wsl2, package-manager, rust, natural-language,
+developer-tools, cross-platform, environment-management
+```
+
+## 14. webpilot
+```
+web-automation, playwright, browser-testing, python, selenium-alternative,
+test-automation, web-scraping, monitoring, ci-cd, developer-tools
+```
+
+## 15. .github (Organization Profile)
 ```
 luminous-dynamics, coherence-as-a-service, erc, consciousness-infrastructure,
 love-guided-technology, open-source, meta-principle-infinite-love,
