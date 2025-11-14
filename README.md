@@ -37,6 +37,12 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[ADR.md](./ADR.md)** - Architecture Decision Records framework
 - **[RELEASES.md](./RELEASES.md)** - Release process and versioning guidelines
 
+### Quality & Collaboration
+- **[STYLE_GUIDE.md](./STYLE_GUIDE.md)** - Documentation writing standards and best practices
+- **[COMMUNICATION.md](./COMMUNICATION.md)** - Communication channels and collaboration protocols
+- **[PARTNERSHIPS.md](./PARTNERSHIPS.md)** - Partnership framework and collaboration guidelines
+- **[ACCESSIBILITY.md](./ACCESSIBILITY.md)** - Accessibility standards and inclusive design
+
 ### Repository Management
 - **[REPOSITORY_TOPICS.md](./REPOSITORY_TOPICS.md)** - Topic tags (discoverability-focused)
 - **[REPOSITORY_TOPICS_ALIGNED.md](./REPOSITORY_TOPICS_ALIGNED.md)** - Topic tags (ERC-focused)
@@ -108,7 +114,10 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 │   ├── general.yml                 # General discussions
 │   ├── project-proposal.yml        # New project proposals
 │   └── philosophy-erc.yml          # Philosophy & ERC discussions
+├── ACCESSIBILITY.md                 # Accessibility standards
+├── ADR.md                          # Architecture Decision Records
 ├── CODE_OF_CONDUCT.md              # Community standards
+├── COMMUNICATION.md                # Communication & collaboration
 ├── CONTRIBUTING.md                 # Contribution guidelines
 ├── CONTRIBUTORS.md                 # Contributor recognition
 ├── FAQ.md                          # Frequently asked questions
@@ -119,13 +128,18 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── IMPROVEMENTS_SUMMARY.md         # Changelog of improvements
 ├── LEARNING.md                     # Learning paths & education
 ├── LICENSE                         # CC-BY-SA 4.0
+├── MENTORSHIP.md                   # Mentorship program
+├── METRICS.md                      # Impact measurement
+├── PARTNERSHIPS.md                 # Partnership framework
 ├── PINNED_REPOSITORIES.md          # Curation recommendations
 ├── PULL_REQUEST_TEMPLATE.md        # PR template
 ├── README.md                       # This file
+├── RELEASES.md                     # Release process
 ├── REPOSITORY_TOPICS.md            # Discoverability-focused topics
 ├── REPOSITORY_TOPICS_ALIGNED.md    # ERC-focused topics
 ├── RESEARCH.md                     # Research & publications
 ├── SECURITY.md                     # Security policy
+├── STYLE_GUIDE.md                  # Documentation style guide
 ├── SUPPORT.md                      # Support guide
 ├── SUSTAINABILITY.md               # Funding & sustainability model
 └── VISION_AND_ROADMAP.md           # Strategic vision (2025-2032)
@@ -133,12 +147,13 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 33 files (~150KB of professional content)
+- **Total Documents**: 37 files (~165KB of professional content)
 - **Community Health Files**: 6 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
 - **Onboarding & Learning**: 4 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING)
 - **Strategic & Governance**: 6 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS)
 - **Development Standards**: 2 (ADR, RELEASES)
+- **Quality & Collaboration**: 4 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY)
 - **Repository Management**: 3 (TOPICS, TOPICS_ALIGNED, PINNED)
 
 ## 🌊 Our Philosophy
