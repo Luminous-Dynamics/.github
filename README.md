@@ -36,6 +36,12 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ### Development
 - **[ADR.md](./ADR.md)** - Architecture Decision Records framework
 - **[RELEASES.md](./RELEASES.md)** - Release process and versioning guidelines
+- **[CODE_REVIEW.md](./CODE_REVIEW.md)** - Code review standards and best practices
+- **[TESTING.md](./TESTING.md)** - Testing philosophy, standards, and requirements
+- **[DEPRECATION.md](./DEPRECATION.md)** - Deprecation policy and graceful sunsetting
+
+### Operational Excellence
+- **[INCIDENT_RESPONSE.md](./INCIDENT_RESPONSE.md)** - Crisis management and incident resolution
 
 ### Quality & Collaboration
 - **[STYLE_GUIDE.md](./STYLE_GUIDE.md)** - Documentation writing standards and best practices
@@ -117,15 +123,18 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── ACCESSIBILITY.md                 # Accessibility standards
 ├── ADR.md                          # Architecture Decision Records
 ├── CODE_OF_CONDUCT.md              # Community standards
+├── CODE_REVIEW.md                  # Code review guidelines
 ├── COMMUNICATION.md                # Communication & collaboration
 ├── CONTRIBUTING.md                 # Contribution guidelines
 ├── CONTRIBUTORS.md                 # Contributor recognition
+├── DEPRECATION.md                  # Deprecation policy
 ├── FAQ.md                          # Frequently asked questions
 ├── FUNDING.yml                     # GitHub Sponsors configuration
 ├── GETTING_STARTED.md              # Newcomer onboarding
 ├── GLOSSARY.md                     # Terminology guide
 ├── GOVERNANCE.md                   # Governance model
 ├── IMPROVEMENTS_SUMMARY.md         # Changelog of improvements
+├── INCIDENT_RESPONSE.md            # Incident & crisis management
 ├── LEARNING.md                     # Learning paths & education
 ├── LICENSE                         # CC-BY-SA 4.0
 ├── MENTORSHIP.md                   # Mentorship program
@@ -142,17 +151,19 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── STYLE_GUIDE.md                  # Documentation style guide
 ├── SUPPORT.md                      # Support guide
 ├── SUSTAINABILITY.md               # Funding & sustainability model
+├── TESTING.md                      # Testing standards
 └── VISION_AND_ROADMAP.md           # Strategic vision (2025-2032)
 ```
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 37 files (~165KB of professional content)
+- **Total Documents**: 41 files (~185KB of professional content)
 - **Community Health Files**: 6 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
 - **Onboarding & Learning**: 4 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING)
 - **Strategic & Governance**: 6 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS)
-- **Development Standards**: 2 (ADR, RELEASES)
+- **Development Standards**: 5 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION)
+- **Operational Excellence**: 1 (INCIDENT_RESPONSE)
 - **Quality & Collaboration**: 4 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY)
 - **Repository Management**: 3 (TOPICS, TOPICS_ALIGNED, PINNED)
 
