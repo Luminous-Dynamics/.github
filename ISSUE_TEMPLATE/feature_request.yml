@@ -1,0 +1,102 @@
+name: 💡 Feature Request
+description: Suggest an idea for this project
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! We welcome ideas that align with our consciousness-first principles.
+
+        *"In unity we code, in love we debug, in consciousness we deploy"* ✨
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which project would benefit from this feature?
+      description: Select the project this feature relates to
+      options:
+        - luminous-dynamics (Main ecosystem)
+        - Mycelix-Core (Federated learning)
+        - kosmic-lab (Research platform)
+        - terra-atlas (Energy platform)
+        - luminous-nix (NixOS interface)
+        - Mycelix-Mail (Email)
+        - Mycelix-Music (Music streaming)
+        - Mycelix-Marketplace (Marketplace)
+        - nsfw (Windows/Nix bridge)
+        - nixite (Package discovery)
+        - webpilot (Browser automation)
+        - Organization-wide
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a problem? Please describe.
+      placeholder: I'm frustrated when... / It would be helpful to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see
+      placeholder: I would like to see... / The feature could work by...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or features?
+      placeholder: I've also thought about... / Another approach could be...
+    validations:
+      required: false
+
+  - type: textarea
+    id: erc-alignment
+    attributes:
+      label: ERC Alignment
+      description: How does this feature align with our consciousness-first principles?
+      placeholder: |
+        Consider how this feature relates to:
+        - Consciousness-First: Preserving awareness
+        - Radical Accessibility: Serving all beings
+        - Regenerative Economics: Community benefit
+        - Sacred Development: Intentional creation
+        - Gift Economy: Reciprocity over extraction
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples about the feature request
+      placeholder: Additional information...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: Contribution
+      description: Would you be willing to contribute to implementing this feature?
+      options:
+        - label: I would be willing to help implement this feature
+          required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

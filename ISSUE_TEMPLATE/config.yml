@@ -1,0 +1,17 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Documentation
+    url: https://docs.luminousdynamics.org
+    about: Visit our documentation for guides and resources
+  - name: 💬 Discussions
+    url: https://github.com/orgs/Luminous-Dynamics/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 🆘 Support Guide
+    url: https://github.com/Luminous-Dynamics/.github/blob/main/SUPPORT.md
+    about: Learn how to get help and support
+  - name: 🌐 Main Website
+    url: https://luminousdynamics.org
+    about: Visit our main website to learn more
+  - name: 📧 Email Contact
+    url: mailto:invest@luminousdynamics.org
+    about: Contact us directly for sensitive matters or partnerships

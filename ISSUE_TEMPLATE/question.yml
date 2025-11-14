@@ -1,0 +1,97 @@
+name: ❓ Question
+description: Ask a question about the project
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question! We're here to help you navigate our consciousness-first technology ecosystem.
+
+        Before asking, please check:
+        - [Documentation](https://docs.luminousdynamics.org)
+        - [Support Guide](https://github.com/Luminous-Dynamics/.github/blob/main/SUPPORT.md)
+        - Existing issues and discussions
+
+        *"In unity we code, in love we debug, in consciousness we deploy"* ✨
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which project does your question relate to?
+      description: Select the most relevant project
+      options:
+        - luminous-dynamics (Main ecosystem)
+        - Mycelix-Core (Federated learning)
+        - kosmic-lab (Research platform)
+        - terra-atlas (Energy platform)
+        - luminous-nix (NixOS interface)
+        - Mycelix-Mail (Email)
+        - Mycelix-Music (Music streaming)
+        - Mycelix-Marketplace (Marketplace)
+        - nsfw (Windows/Nix bridge)
+        - nixite (Package discovery)
+        - webpilot (Browser automation)
+        - ERC Philosophy
+        - General / Organization
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What type of question is this?
+      options:
+        - Getting Started / Installation
+        - Usage / How-To
+        - Configuration / Setup
+        - Philosophy / ERC Principles
+        - Contributing / Development
+        - Performance / Optimization
+        - Integration / Compatibility
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: Please be as specific as possible...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to accomplish? What have you tried so far?
+      placeholder: |
+        I'm trying to...
+        I've already tried...
+        I've looked at...
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (if relevant)
+      description: System details if relevant to your question
+      placeholder: |
+        - OS: [e.g., Ubuntu 24.04]
+        - Version: [e.g., v0.7.0]
+        - Other relevant details
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

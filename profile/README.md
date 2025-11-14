@@ -83,10 +83,26 @@ Professional web automation with Playwright. 63% faster execution, auto-waiting,
 - 💎 **Sacred Development**: Code with love, wisdom, and intention
 - 🔄 **Gift Economy**: Sacred reciprocity over extraction
 
+## 🌐 Resources & Documentation
+
+- 📖 **Documentation**: [docs.luminousdynamics.org](https://docs.luminousdynamics.org)
+- 🌟 **Developer Portal**: [luminousdynamics.io](https://luminousdynamics.io)
+- 🗣️ **Luminous Nix**: [nixforhumanity.org](https://nixforhumanity.org)
+- ⚡ **Mycelix Network**: [mycelix.net](https://mycelix.net)
+- 📚 **ERC Philosophy**: [evolvingresonantcocreationism.com](https://evolvingresonantcocreationism.com)
+
+## 💝 Support Our Work
+
+We operate on gift economy principles. If our work serves you:
+
+- ☕ **Ko-fi**: [ko-fi.com/luminousdynamics](https://ko-fi.com/luminousdynamics)
+- 💰 **Investment**: [terra-lumina.com/invest](https://terra-lumina.com/invest)
+- 🌱 **Community Support**: [evolvingresonantcocreationism.com/support](https://evolvingresonantcocreationism.com/support)
+
 ## 📫 Connect With Us
 
-- 🌐 **Philosophy**: [luminousdynamics.org](https://luminousdynamics.org)
-- 📧 **Investment**: invest@luminousdynamics.org
+- 🌐 **Main Website**: [luminousdynamics.org](https://luminousdynamics.org)
+- 📧 **Contact**: invest@luminousdynamics.org
 - 💻 **GitHub**: [@Luminous-Dynamics](https://github.com/Luminous-Dynamics)
 
 ---

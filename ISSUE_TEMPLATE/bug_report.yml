@@ -1,0 +1,103 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this bug! We appreciate your contribution to improving our consciousness-first technology.
+
+        *"In unity we code, in love we debug, in consciousness we deploy"* ✨
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which project is affected?
+      description: Select the project where you encountered this bug
+      options:
+        - luminous-dynamics (Main ecosystem)
+        - Mycelix-Core (Federated learning)
+        - kosmic-lab (Research platform)
+        - terra-atlas (Energy platform)
+        - luminous-nix (NixOS interface)
+        - Mycelix-Mail (Email)
+        - Mycelix-Music (Music streaming)
+        - Mycelix-Marketplace (Marketplace)
+        - nsfw (Windows/Nix bridge)
+        - nixite (Package discovery)
+        - webpilot (Browser automation)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe the issue you're experiencing...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this behavior?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Describe what should have happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide relevant environment details
+      placeholder: |
+        - OS: [e.g., Ubuntu 24.04, macOS 14, Windows 11]
+        - Version: [e.g., v0.7.0]
+        - Browser (if applicable): [e.g., Chrome 120, Firefox 121]
+        - Additional context: [any other relevant details]
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: If applicable, add logs or screenshots to help explain the problem
+      placeholder: Paste relevant logs or drag and drop screenshots here...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Luminous-Dynamics/.github/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
