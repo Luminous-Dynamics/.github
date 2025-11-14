@@ -10,10 +10,12 @@ Based on **Evolving Resonant Co-creationism (ERC)**, we're creating technology t
 
 ## Main Projects
 
-1. **[Codex of Relational Harmonics](https://github.com/Luminous-Dynamics/codex-of-relational-harmonics)** - 87 sacred patterns for conscious relationship transformation
-2. **[The Weave](https://github.com/Luminous-Dynamics/the-weave)** - Multi-agent AI collaboration platform
-3. **[Sacred Infrastructure](https://github.com/Luminous-Dynamics/sacred-infrastructure)** - Consciousness-aware DevOps
-4. **[LuminousOS](https://github.com/Luminous-Dynamics/luminous-os)** - Experimental consciousness-first computing
+1. **[Luminous Dynamics](https://github.com/Luminous-Dynamics/luminous-dynamics)** - Main consciousness-first computing ecosystem (contains The Weave, Sacred Core API, Field Visualizer, and Codex with 87+ patterns)
+2. **[Mycelix Protocol](https://github.com/Luminous-Dynamics/Mycelix-Core)** - Byzantine-resistant federated learning with MATL/0TML trust layer
+3. **[Kosmic Lab](https://github.com/Luminous-Dynamics/kosmic-lab)** - AI-accelerated consciousness research platform
+4. **[Terra Atlas](https://github.com/Luminous-Dynamics/terra-atlas)** - Live global energy investment platform
+5. **[Luminous Nix](https://github.com/Luminous-Dynamics/luminous-nix)** - Natural language interface for NixOS
+6. **[Evolving Resonant Co-creationism](https://github.com/Luminous-Dynamics/evolving-resonant-cocreationism)** - Our philosophical foundation
 
 ## Structure
 
