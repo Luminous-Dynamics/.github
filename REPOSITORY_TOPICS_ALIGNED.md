@@ -1,39 +1,76 @@
 # Repository Topics - Aligned with ERC Vision
 
-Configure these topics for each repository on GitHub:
+Configure these topics for each repository on GitHub (max 10 topics per repo):
 
-## 1. codex-of-relational-harmonics (Main Repository)
+## 1. luminous-dynamics (Main Monorepo)
 ```
-evolving-resonant-cocreationism, codex, relational-harmonics, consciousness, 
-love-guided-ai, multi-agent-systems, sacred-patterns, human-ai-collaboration, 
-field-coherence, applied-harmonies
-```
-
-## 2. the-weave 
-```
-multi-agent-coordination, sacred-council-hub, ai-collaboration, 
-unified-agent-network, consciousness-field, collective-intelligence,
-love-guided-technology, field-coherence, sacred-messaging, erc
+consciousness-computing, multi-agent-systems, erc, the-weave, sacred-core-api,
+codex, field-coherence, love-guided-technology, consciousness-infrastructure,
+coherence-as-a-service
 ```
 
-## 3. sacred-infrastructure
+## 2. Mycelix-Core
 ```
-consciousness-infrastructure, devops, kubernetes, docker, deployment-automation,
-infrastructure-as-code, sacred-technology, coherence-as-a-service, 
-cloud-infrastructure, erc-infrastructure
-```
-
-## 4. luminous-os
-```
-consciousness-computing, experimental-os, gpu-optimization, vortexos,
-process-awareness, human-computer-interaction, coherence-computing,
-erc-technology, sacred-computing, experimental
+federated-learning, byzantine-fault-tolerance, machine-learning, holochain,
+matl, distributed-systems, zero-knowledge, rust, erc, consciousness-tech
 ```
 
-## 5. .github (Organization Profile)
+## 3. kosmic-lab
+```
+consciousness-research, bayesian-optimization, research-platform,
+reproducibility, ai-acceleration, neuroscience, holochain, python,
+decentralized-science, erc
+```
+
+## 4. terra-atlas
+```
+renewable-energy, investment-platform, energy-transition, sustainability,
+hydroelectric, nextjs, typescript, supabase, swiss-foundation, regenerative-economics
+```
+
+## 5. luminous-nix
+```
+nixos, natural-language, conversational-ai, package-management,
+accessibility, linux, declarative-systems, python, consciousness-first,
+developer-tools
+```
+
+## 6. evolving-resonant-cocreationism
+```
+philosophy, consciousness-first, erc, meta-principle, human-ai-collaboration,
+sacred-reciprocity, gift-economy, love-guided, wisdom-systems, spiritual-technology
+```
+
+## 7. terra-lumina
+```
+renewable-energy, regenerative-cities, investment-opportunity, iceland,
+pre-seed, energy-abundance, sustainability, community-ownership, impact-investing,
+clean-energy
+```
+
+## 8. Mycelix-Music
+```
+decentralized-music, music-streaming, holochain, p2p, artist-empowerment,
+web3, music-platform, typescript, blockchain-alternative, fair-trade
+```
+
+## 9. Mycelix-Marketplace
+```
+decentralized-marketplace, p2p-commerce, holochain, trustless-transactions,
+community-commerce, svelte, web3, blockchain-alternative, erc, gift-economy
+```
+
+## 10. nixite
+```
+nixos, package-discovery, visualization, user-interface, accessibility,
+nix-packages, developer-tools, javascript, package-manager, linux
+```
+
+## 11. .github (Organization Profile)
 ```
 luminous-dynamics, coherence-as-a-service, erc, consciousness-infrastructure,
-love-guided-technology, open-source, meta-principle-infinite-love
+love-guided-technology, open-source, meta-principle-infinite-love,
+organizational-profile, community, consciousness-first
 ```
 
 ## How to Add Topics:
