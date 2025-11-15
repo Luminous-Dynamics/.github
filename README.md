@@ -36,6 +36,8 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[RESEARCH.md](./RESEARCH.md)** - Research publications and academic contributions
 - **[LEGAL.md](./LEGAL.md)** - Legal compliance, licensing, and IP protection
 - **[INNOVATION.md](./INNOVATION.md)** - Innovation lab and experimentation framework
+- **[OPEN_SOURCE_GUIDE.md](./OPEN_SOURCE_GUIDE.md)** - Open source philosophy and best practices
+- **[DATA_PRIVACY.md](./DATA_PRIVACY.md)** - Data privacy laws and practices
 
 ### Development
 - **[ADR.md](./ADR.md)** - Architecture Decision Records framework
@@ -53,6 +55,8 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[INFRASTRUCTURE.md](./INFRASTRUCTURE.md)** - Infrastructure as Code
 - **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deployment strategies
 - **[ENVIRONMENTS.md](./ENVIRONMENTS.md)** - Environment and secrets management
+- **[SCALING.md](./SCALING.md)** - Scaling applications and infrastructure
+- **[DOCUMENTATION_PRACTICES.md](./DOCUMENTATION_PRACTICES.md)** - Documentation excellence
 
 ### People & Culture
 - **[CONTRIBUTOR_LADDER.md](./CONTRIBUTOR_LADDER.md)** - Career growth pathways from newcomer to core team
@@ -152,11 +156,13 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── CONTRIBUTING.md                 # Contribution guidelines
 ├── CONTRIBUTOR_LADDER.md           # Career growth pathways
 ├── CONTRIBUTORS.md                 # Contributor recognition
+├── DATA_PRIVACY.md                 # Data privacy laws and practices
 ├── DEPENDENCIES.md                 # Dependency management and security
 ├── DEPLOYMENT.md                   # Deployment strategies
 ├── DEPRECATION.md                  # Deprecation policy
 ├── DESIGN.md                       # Design principles
 ├── DEVELOPER_EXPERIENCE.md         # Developer experience philosophy and best practices
+├── DOCUMENTATION_PRACTICES.md      # Documentation excellence
 ├── ENVIRONMENTS.md                 # Environment and secrets management
 ├── EVENTS.md                       # Community event planning
 ├── FAQ.md                          # Frequently asked questions
@@ -176,6 +182,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── METRICS.md                      # Impact measurement
 ├── ONBOARDING_AUTOMATION.md        # Automating onboarding while preserving humanity
 ├── OBSERVABILITY.md                # Logging, metrics, tracing, and monitoring
+├── OPEN_SOURCE_GUIDE.md            # Open source philosophy and best practices
 ├── PARTNERSHIPS.md                 # Partnership framework
 ├── PERFORMANCE.md                  # Performance standards
 ├── PINNED_REPOSITORIES.md          # Curation recommendations
@@ -189,6 +196,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── RECOGNITION.md                  # Recognition and celebration programs
 ├── RETROSPECTIVES.md               # Continuous improvement
 ├── SECURITY.md                     # Security policy
+├── SCALING.md                      # Scaling applications and infrastructure
 ├── STYLE_GUIDE.md                  # Documentation style guide
 ├── SUPPORT.md                      # Support guide
 ├── SUSTAINABILITY.md               # Funding & sustainability model
@@ -199,12 +207,12 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 61 files (~275KB of professional content)
+- **Total Documents**: 65 files (~285KB of professional content)
 - **Community Health Files**: 7 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP, EVENTS)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
 - **Onboarding & Learning**: 5 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING, PLAYBOOKS)
-- **Strategic & Governance**: 8 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS, LEGAL, INNOVATION)
-- **Development Standards**: 15 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE, DEVELOPER_EXPERIENCE, API_DESIGN, OBSERVABILITY, DEPENDENCIES, CI_CD, INFRASTRUCTURE, DEPLOYMENT, ENVIRONMENTS)
+- **Strategic & Governance**: 10 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS, LEGAL, INNOVATION, OPEN_SOURCE_GUIDE, DATA_PRIVACY)
+- **Development Standards**: 17 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE, DEVELOPER_EXPERIENCE, API_DESIGN, OBSERVABILITY, DEPENDENCIES, CI_CD, INFRASTRUCTURE, DEPLOYMENT, ENVIRONMENTS, SCALING, DOCUMENTATION_PRACTICES)
 - **People & Culture**: 3 (CONTRIBUTOR_LADDER, RETROSPECTIVES, RECOGNITION)
 - **Operational Excellence**: 1 (INCIDENT_RESPONSE)
 - **Quality & Collaboration**: 7 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY, LOCALIZATION, ONBOARDING_AUTOMATION, TEMPLATES)
