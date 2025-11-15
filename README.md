@@ -49,6 +49,10 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[API_DESIGN.md](./API_DESIGN.md)** - API design principles and standards
 - **[OBSERVABILITY.md](./OBSERVABILITY.md)** - Logging, metrics, tracing, and monitoring
 - **[DEPENDENCIES.md](./DEPENDENCIES.md)** - Dependency management and security
+- **[CI_CD.md](./CI_CD.md)** - Continuous integration and deployment
+- **[INFRASTRUCTURE.md](./INFRASTRUCTURE.md)** - Infrastructure as Code
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deployment strategies
+- **[ENVIRONMENTS.md](./ENVIRONMENTS.md)** - Environment and secrets management
 
 ### People & Culture
 - **[CONTRIBUTOR_LADDER.md](./CONTRIBUTOR_LADDER.md)** - Career growth pathways from newcomer to core team
@@ -141,6 +145,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── ACCESSIBILITY.md                 # Accessibility standards
 ├── ADR.md                          # Architecture Decision Records
 ├── API_DESIGN.md                   # API design principles and standards
+├── CI_CD.md                        # Continuous integration and deployment
 ├── CODE_OF_CONDUCT.md              # Community standards
 ├── CODE_REVIEW.md                  # Code review guidelines
 ├── COMMUNICATION.md                # Communication & collaboration
@@ -148,9 +153,11 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── CONTRIBUTOR_LADDER.md           # Career growth pathways
 ├── CONTRIBUTORS.md                 # Contributor recognition
 ├── DEPENDENCIES.md                 # Dependency management and security
+├── DEPLOYMENT.md                   # Deployment strategies
 ├── DEPRECATION.md                  # Deprecation policy
 ├── DESIGN.md                       # Design principles
 ├── DEVELOPER_EXPERIENCE.md         # Developer experience philosophy and best practices
+├── ENVIRONMENTS.md                 # Environment and secrets management
 ├── EVENTS.md                       # Community event planning
 ├── FAQ.md                          # Frequently asked questions
 ├── FUNDING.yml                     # GitHub Sponsors configuration
@@ -159,6 +166,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── GOVERNANCE.md                   # Governance model
 ├── IMPROVEMENTS_SUMMARY.md         # Changelog of improvements
 ├── INCIDENT_RESPONSE.md            # Incident & crisis management
+├── INFRASTRUCTURE.md               # Infrastructure as Code
 ├── INNOVATION.md                   # Innovation lab and experimentation framework
 ├── LEARNING.md                     # Learning paths & education
 ├── LEGAL.md                        # Legal compliance, licensing, and IP protection
@@ -191,12 +199,12 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 57 files (~260KB of professional content)
+- **Total Documents**: 61 files (~275KB of professional content)
 - **Community Health Files**: 7 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP, EVENTS)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
 - **Onboarding & Learning**: 5 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING, PLAYBOOKS)
 - **Strategic & Governance**: 8 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS, LEGAL, INNOVATION)
-- **Development Standards**: 11 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE, DEVELOPER_EXPERIENCE, API_DESIGN, OBSERVABILITY, DEPENDENCIES)
+- **Development Standards**: 15 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE, DEVELOPER_EXPERIENCE, API_DESIGN, OBSERVABILITY, DEPENDENCIES, CI_CD, INFRASTRUCTURE, DEPLOYMENT, ENVIRONMENTS)
 - **People & Culture**: 3 (CONTRIBUTOR_LADDER, RETROSPECTIVES, RECOGNITION)
 - **Operational Excellence**: 1 (INCIDENT_RESPONSE)
 - **Quality & Collaboration**: 7 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY, LOCALIZATION, ONBOARDING_AUTOMATION, TEMPLATES)
