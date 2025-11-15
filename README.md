@@ -17,6 +17,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[FAQ.md](./FAQ.md)** - Frequently asked questions
 - **[GLOSSARY.md](./GLOSSARY.md)** - Terminology and concepts explained
 - **[LEARNING.md](./LEARNING.md)** - Learning paths and educational resources
+- **[PLAYBOOKS.md](./PLAYBOOKS.md)** - Tactical step-by-step guides for common scenarios
 
 ### Community
 - **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** - Community standards and expectations
@@ -34,6 +35,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[SECURITY.md](./SECURITY.md)** - Security policy and vulnerability reporting
 - **[RESEARCH.md](./RESEARCH.md)** - Research publications and academic contributions
 - **[LEGAL.md](./LEGAL.md)** - Legal compliance, licensing, and IP protection
+- **[INNOVATION.md](./INNOVATION.md)** - Innovation lab and experimentation framework
 
 ### Development
 - **[ADR.md](./ADR.md)** - Architecture Decision Records framework
@@ -47,6 +49,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ### People & Culture
 - **[CONTRIBUTOR_LADDER.md](./CONTRIBUTOR_LADDER.md)** - Career growth pathways from newcomer to core team
 - **[RETROSPECTIVES.md](./RETROSPECTIVES.md)** - Continuous improvement through reflection
+- **[RECOGNITION.md](./RECOGNITION.md)** - Recognition and celebration programs
 
 ### Operational Excellence
 - **[INCIDENT_RESPONSE.md](./INCIDENT_RESPONSE.md)** - Crisis management and incident resolution
@@ -58,6 +61,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[ACCESSIBILITY.md](./ACCESSIBILITY.md)** - Accessibility standards and inclusive design
 - **[LOCALIZATION.md](./LOCALIZATION.md)** - Internationalization and localization for global reach
 - **[ONBOARDING_AUTOMATION.md](./ONBOARDING_AUTOMATION.md)** - Automating onboarding while preserving humanity
+- **[TEMPLATES.md](./TEMPLATES.md)** - Copy-paste templates for common tasks
 
 ### Repository Management
 - **[REPOSITORY_TOPICS.md](./REPOSITORY_TOPICS.md)** - Topic tags (discoverability-focused)
@@ -148,6 +152,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── GOVERNANCE.md                   # Governance model
 ├── IMPROVEMENTS_SUMMARY.md         # Changelog of improvements
 ├── INCIDENT_RESPONSE.md            # Incident & crisis management
+├── INNOVATION.md                   # Innovation lab and experimentation framework
 ├── LEARNING.md                     # Learning paths & education
 ├── LEGAL.md                        # Legal compliance, licensing, and IP protection
 ├── LICENSE                         # CC-BY-SA 4.0
@@ -158,32 +163,35 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── PARTNERSHIPS.md                 # Partnership framework
 ├── PERFORMANCE.md                  # Performance standards
 ├── PINNED_REPOSITORIES.md          # Curation recommendations
+├── PLAYBOOKS.md                    # Tactical step-by-step guides for common scenarios
 ├── PULL_REQUEST_TEMPLATE.md        # PR template
 ├── README.md                       # This file
 ├── RELEASES.md                     # Release process
 ├── REPOSITORY_TOPICS.md            # Discoverability-focused topics
 ├── REPOSITORY_TOPICS_ALIGNED.md    # ERC-focused topics
 ├── RESEARCH.md                     # Research & publications
+├── RECOGNITION.md                  # Recognition and celebration programs
 ├── RETROSPECTIVES.md               # Continuous improvement
 ├── SECURITY.md                     # Security policy
 ├── STYLE_GUIDE.md                  # Documentation style guide
 ├── SUPPORT.md                      # Support guide
 ├── SUSTAINABILITY.md               # Funding & sustainability model
+├── TEMPLATES.md                    # Copy-paste templates for common tasks
 ├── TESTING.md                      # Testing standards
 └── VISION_AND_ROADMAP.md           # Strategic vision (2025-2032)
 ```
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 49 files (~210KB of professional content)
+- **Total Documents**: 53 files (~230KB of professional content)
 - **Community Health Files**: 7 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP, EVENTS)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
-- **Onboarding & Learning**: 4 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING)
-- **Strategic & Governance**: 7 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS, LEGAL)
+- **Onboarding & Learning**: 5 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING, PLAYBOOKS)
+- **Strategic & Governance**: 8 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS, LEGAL, INNOVATION)
 - **Development Standards**: 7 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE)
-- **People & Culture**: 2 (CONTRIBUTOR_LADDER, RETROSPECTIVES)
+- **People & Culture**: 3 (CONTRIBUTOR_LADDER, RETROSPECTIVES, RECOGNITION)
 - **Operational Excellence**: 1 (INCIDENT_RESPONSE)
-- **Quality & Collaboration**: 6 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY, LOCALIZATION, ONBOARDING_AUTOMATION)
+- **Quality & Collaboration**: 7 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY, LOCALIZATION, ONBOARDING_AUTOMATION, TEMPLATES)
 - **Repository Management**: 3 (TOPICS, TOPICS_ALIGNED, PINNED)
 
 ## 🌊 Our Philosophy
