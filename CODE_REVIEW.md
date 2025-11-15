@@ -6,6 +6,35 @@ This guide provides principles and practices for effective, conscious code revie
 
 ---
 
+## 📋 Quick Reference Card
+
+**Review Feedback Labels:**
+
+| Label | Meaning | Action Required | Example |
+|-------|---------|-----------------|---------|
+| ⛔ **blocking** | Critical issue, must fix before merge | Author must fix | Security vulnerability, logic error |
+| ⚠️ **issue** | Important, should fix | Author should fix | Design flaw, unclear API |
+| 💡 **suggestion** | Optional improvement | Author decides | Code style, optimization |
+| ❓ **question** | Seeking clarification | Author explains | "Why this approach?" |
+| 🎉 **praise** | Good work! | None (celebrate!) | "Great test coverage!" |
+| 🔍 **nitpick** | Minor style point | Optional | "Typo in comment" |
+
+**Response Time Expectations:**
+
+| PR Size | Lines | First Review | Follow-ups |
+|---------|-------|--------------|------------|
+| ⚡ Tiny | <20 | 4-8 hours | 2-4 hours |
+| 📦 Small | 20-100 | 1-2 days | 1 day |
+| 📚 Medium | 100-500 | 2-4 days | 1-2 days |
+| 🏗️ Large | >500 | 4-7 days | 2-3 days (consider splitting!) |
+
+**Priority Decision:**
+1. Security/Logic error → 🔴 **Block merge**
+2. Design/Performance issue → 🟡 **Request changes**
+3. Style/Minor → 🟢 **Suggestion only**
+
+---
+
 ## 🎯 Code Review Philosophy
 
 ### Purpose of Code Review
@@ -53,6 +82,49 @@ Code review **is** about:
 ---
 
 ## 📋 What to Review
+
+### Review Priority Decision Tree
+
+Use this flowchart to quickly prioritize your code review feedback:
+
+```mermaid
+flowchart TD
+    Start["📝 Start Review"] --> Security{"🔒 Security<br/>issue?"}
+    Security -->|Yes| Critical["⛔ PRIORITY 1<br/>MUST FIX<br/>(Block merge)"]
+    Security -->|No| Logic{"🐛 Logic error or<br/>data integrity<br/>issue?"}
+
+    Logic -->|Yes| Critical
+    Logic -->|No| Breaking{"💥 Breaking<br/>change?"}
+
+    Breaking -->|Yes| Important["⚠️ PRIORITY 2<br/>SHOULD FIX<br/>(Request changes)"]
+    Breaking -->|No| Design{"🏗️ Design issue or<br/>unclear API?"}
+
+    Design -->|Yes| Important
+    Design -->|No| Performance{"⚡ Significant<br/>performance<br/>concern?"}
+
+    Performance -->|Yes| Important
+    Performance -->|No| Style{"✨ Code style or<br/>minor issue?"}
+
+    Style -->|Yes| Suggest["💡 PRIORITY 3<br/>SUGGESTION<br/>(Nice to have)"]
+    Style -->|No| Good["✅ LOOKS GOOD!<br/>Approve"]
+
+    Critical --> BlockMerge["🚫 Block merge<br/>until fixed"]
+    Important --> Request["💬 Request changes<br/>but not critical"]
+    Suggest --> Optional["📝 Comment but<br/>author decides"]
+    Good --> Approve["✨ Approve PR"]
+
+    style Critical fill:#ef5350,color:#fff
+    style Important fill:#ffa726,color:#fff
+    style Suggest fill:#66bb6a,color:#fff
+    style Good fill:#42a5f5,color:#fff
+```
+
+**Label Guide:**
+- 🔴 **Priority 1 (Critical)**: Security, logic errors, data integrity - MUST FIX
+- 🟡 **Priority 2 (Important)**: Design, performance, breaking changes - SHOULD FIX
+- 🟢 **Priority 3 (Suggestion)**: Style, optimizations, improvements - NICE TO HAVE
+
+---
 
 ### Priority 1: Correctness & Security
 
@@ -393,6 +465,57 @@ Ready for another look!
 ---
 
 ## ⏱️ Review Process & Timing
+
+### PR Review Lifecycle
+
+The complete journey from opening a PR to merge:
+
+```mermaid
+sequenceDiagram
+    participant Author
+    participant CI/CD
+    participant Reviewers
+    participant Repo
+
+    Author->>Repo: 1. Open PR
+    Repo->>CI/CD: Trigger automated checks
+    CI/CD-->>Repo: Tests, linting, security scans
+
+    alt Tests Fail
+        CI/CD--xAuthor: ❌ Build failed
+        Author->>Repo: Fix issues, push updates
+        Repo->>CI/CD: Re-run checks
+    end
+
+    CI/CD-->>Repo: ✅ All checks pass
+    Repo->>Reviewers: 2. Notify reviewers
+
+    Reviewers->>Repo: 3a. Review code
+
+    alt Changes Requested
+        Reviewers-->>Author: 💬 Request changes
+        Author->>Repo: 4. Address feedback, push changes
+        Repo->>CI/CD: Re-run checks
+        CI/CD-->>Repo: ✅ Checks pass
+        Repo->>Reviewers: 5. Notify: PR updated
+        Reviewers->>Repo: 6. Re-review
+    end
+
+    Reviewers-->>Repo: ✅ Approve PR
+    Author->>Repo: 7. Merge to main
+    Repo->>CI/CD: Deploy to production
+    CI/CD-->>Author: 🎉 Deployment successful
+
+    Note over Author,Repo: Typical timeline: 1-5 days<br/>depending on PR size
+```
+
+**Timeline Expectations:**
+- ⚡ Tiny PRs (<20 lines): 4-8 hours first review
+- 📦 Small PRs (<100 lines): 1-2 days first review
+- 📚 Medium PRs (<500 lines): 2-4 days first review
+- 🏗️ Large PRs (>500 lines): 4-7 days (consider splitting!)
+
+---
 
 ### For Authors: Submitting for Review
 

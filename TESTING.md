@@ -54,17 +54,22 @@ This guide defines testing philosophy, standards, and practices across all Lumin
 
 ### Test Pyramid
 
-```
-          /\
-         /  \        E2E Tests
-        /----\       (Fewer, Slower, Integration-focused)
-       /      \
-      /--------\     Integration Tests
-     /          \    (Medium number, Medium speed)
-    /------------\
-   /--------------\  Unit Tests
-  /                \ (Many, Fast, Isolated)
- /------------------\
+The test pyramid shows the ideal balance of test types:
+
+```mermaid
+graph TB
+    subgraph Pyramid["✅ IDEAL: Test Pyramid"]
+        E2E["E2E Tests<br/>10% of tests<br/>🐢 Slow (seconds)<br/>Full user flows"]
+        INT["Integration Tests<br/>20% of tests<br/>🚶 Medium speed<br/>Components together"]
+        UNIT["Unit Tests<br/>70% of tests<br/>⚡ Fast (milliseconds)<br/>Isolated functions"]
+    end
+
+    E2E -.->|Fewer| INT
+    INT -.->|More| UNIT
+
+    style E2E fill:#ffcdd2
+    style INT fill:#fff9c4
+    style UNIT fill:#c8e6c9
 ```
 
 **Ideal Distribution:**
@@ -72,18 +77,39 @@ This guide defines testing philosophy, standards, and practices across all Lumin
 - **20% Integration Tests** - Test components working together
 - **10% E2E Tests** - Full system, user perspective
 
-**Anti-Pattern: Ice Cream Cone**
+**Why this ratio?**
+- Fast feedback loop (most tests run in milliseconds)
+- Easy to debug (unit tests pinpoint exact failure)
+- Reliable (unit tests rarely flaky)
+- Comprehensive (integration/E2E catch integration issues)
+
+---
+
+#### ❌ Anti-Pattern: Ice Cream Cone
+
+```mermaid
+graph BT
+    subgraph AntiPattern["❌ AVOID: Ice Cream Cone"]
+        U2["Unit Tests<br/>10% of tests<br/>Too few!"]
+        I2["Integration Tests<br/>30% of tests"]
+        E22["E2E Tests<br/>60% of tests<br/>⚠️ Slow & Brittle"]
+    end
+
+    U2 -.->|Growing| I2
+    I2 -.->|Too many!| E22
+
+    style U2 fill:#ffcdd2
+    style I2 fill:#fff9c4
+    style E22 fill:#ef5350
 ```
-  /------------------\
- /                    \ E2E Tests (Slow, Brittle)
-/----------------------\
-\                      / Integration Tests (Medium)
- \                    /
-  \                  /
-   \                /    Unit Tests (Few)
-    \--------------/
-```
-*Avoid: Too many slow E2E tests, too few fast unit tests*
+
+**Why avoid:**
+- ❌ Slow feedback (waiting minutes for tests)
+- ❌ Flaky tests (E2E tests unstable)
+- ❌ Hard to debug (which component failed?)
+- ❌ Expensive to maintain
+
+**If you have this:** Gradually add unit tests, remove redundant E2E tests
 
 ### Unit Tests
 
@@ -586,9 +612,26 @@ jobs:
 
 ### Red-Green-Refactor Cycle
 
-1. **Red** - Write failing test
-2. **Green** - Write minimum code to pass
-3. **Refactor** - Improve code without changing behavior
+TDD follows a continuous cycle of three phases:
+
+```mermaid
+graph LR
+    RED["🔴 RED<br/>Write failing test<br/>(Test first!)"] -->|Test fails| GREEN["🟢 GREEN<br/>Write minimum code<br/>(Make it pass)"]
+    GREEN -->|Test passes| REFACTOR["🔵 REFACTOR<br/>Improve code<br/>(Keep tests passing)"]
+    REFACTOR -->|Better design| RED
+
+    style RED fill:#ffcdd2
+    style GREEN fill:#c8e6c9
+    style REFACTOR fill:#bbdefb
+```
+
+**The Cycle:**
+1. **🔴 Red** - Write a failing test for new functionality
+2. **🟢 Green** - Write minimum code to make the test pass
+3. **🔵 Refactor** - Improve code quality without changing behavior
+4. **Repeat** - Start the cycle again with the next test
+
+---
 
 **Example:**
 

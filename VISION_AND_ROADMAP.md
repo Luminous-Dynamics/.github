@@ -65,7 +65,83 @@ Based on **Evolving Resonant Co-creationism (ERC)**, we're creating a technologi
 
 **Status**: Live platform, growing community
 
+### Strategic Pillars Visual Map
+
+The five strategic pillars form an interconnected ecosystem, each supporting and amplifying the others:
+
+```mermaid
+graph TB
+    subgraph Vision["🌟 Coherence as a Service (CaaS)"]
+        A[1. Consciousness<br/>Infrastructure]
+        B[2. Trust &<br/>Decentralization]
+        C[3. Energy<br/>Democratization]
+        D[4. Accessibility<br/>& Tools]
+        E[5. Gift Economy<br/>Infrastructure]
+    end
+
+    A -->|Enables| B
+    A -->|Powers| C
+    A -->|Guides| E
+    B -->|Secures| C
+    B -->|Distributes| E
+    D -->|Simplifies| A
+    D -->|Unlocks| B
+    D -->|Opens| C
+    C -->|Funds| E
+    E -->|Sustains| A
+
+    style A fill:#FFE5B4
+    style B fill:#E0F7FA
+    style C fill:#C8E6C9
+    style D fill:#F8BBD0
+    style E fill:#E1BEE7
+```
+
+**Key Relationships**:
+- **Consciousness Infrastructure** forms the foundation, enabling all other pillars
+- **Trust & Decentralization** secures energy platforms and distributes gift economy
+- **Energy Democratization** generates funding for gift economy initiatives
+- **Accessibility & Tools** make all pillars available to everyone
+- **Gift Economy** sustains the consciousness infrastructure, creating a regenerative loop
+
+---
+
 ## 🗺️ Roadmap
+
+### Quarterly Timeline
+
+```mermaid
+gantt
+    title Luminous Dynamics Roadmap (Q4 2025 - Q4 2026)
+    dateFormat YYYY-MM-DD
+    section Q4 2025 Foundation
+    Terra Lumina fundraising     :active, q4_tl, 2025-10-01, 90d
+    Kosmic Lab protocols         :active, q4_kl, 2025-10-01, 90d
+    Luminous Nix v1.0           :active, q4_ln, 2025-11-01, 60d
+
+    section Q1 2026 Integration
+    The Weave production        :q1_tw, 2026-01-01, 90d
+    Sacred Core API beta        :q1_sc, 2026-01-15, 75d
+    Mycelix Mail beta           :q1_mm, 2026-02-01, 60d
+    Terra Atlas 1K investors    :q1_ta, 2026-01-01, 90d
+
+    section Q2 2026 Scaling
+    Community growth (10K stars):q2_cg, 2026-04-01, 90d
+    Luminous Nix 90% accuracy   :q2_ln, 2026-04-01, 90d
+    Kosmic Lab first paper      :q2_kl, 2026-05-01, 60d
+
+    section Q3 2026 Enterprise
+    Mycelix enterprise licensing:q3_me, 2026-07-01, 90d
+    Healthcare pilot            :q3_hp, 2026-08-01, 60d
+    Gift economy expansion      :q3_ge, 2026-07-01, 90d
+
+    section Q4 2026 Scale
+    100K beings served          :milestone, q4_m1, 2026-10-01, 1d
+    $10M energy democratized    :milestone, q4_m2, 2026-11-01, 1d
+    Community ownership begins  :crit, q4_co, 2026-10-01, 90d
+```
+
+---
 
 ### Q4 2025 - Foundation Strengthening
 
