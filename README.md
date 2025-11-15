@@ -24,6 +24,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[CONTRIBUTORS.md](./CONTRIBUTORS.md)** - Contributor recognition and hall of fame
 - **[MENTORSHIP.md](./MENTORSHIP.md)** - Mentorship program and sacred reciprocity
 - **[SUPPORT.md](./SUPPORT.md)** - Getting help and support
+- **[EVENTS.md](./EVENTS.md)** - Community event planning and execution
 
 ### Organization
 - **[VISION_AND_ROADMAP.md](./VISION_AND_ROADMAP.md)** - Strategic vision and roadmap (2025-2032)
@@ -32,6 +33,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[METRICS.md](./METRICS.md)** - Impact measurement and success metrics
 - **[SECURITY.md](./SECURITY.md)** - Security policy and vulnerability reporting
 - **[RESEARCH.md](./RESEARCH.md)** - Research publications and academic contributions
+- **[LEGAL.md](./LEGAL.md)** - Legal compliance, licensing, and IP protection
 
 ### Development
 - **[ADR.md](./ADR.md)** - Architecture Decision Records framework
@@ -54,6 +56,8 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[COMMUNICATION.md](./COMMUNICATION.md)** - Communication channels and collaboration protocols
 - **[PARTNERSHIPS.md](./PARTNERSHIPS.md)** - Partnership framework and collaboration guidelines
 - **[ACCESSIBILITY.md](./ACCESSIBILITY.md)** - Accessibility standards and inclusive design
+- **[LOCALIZATION.md](./LOCALIZATION.md)** - Internationalization and localization for global reach
+- **[ONBOARDING_AUTOMATION.md](./ONBOARDING_AUTOMATION.md)** - Automating onboarding while preserving humanity
 
 ### Repository Management
 - **[REPOSITORY_TOPICS.md](./REPOSITORY_TOPICS.md)** - Topic tags (discoverability-focused)
@@ -136,6 +140,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── CONTRIBUTORS.md                 # Contributor recognition
 ├── DEPRECATION.md                  # Deprecation policy
 ├── DESIGN.md                       # Design principles
+├── EVENTS.md                       # Community event planning
 ├── FAQ.md                          # Frequently asked questions
 ├── FUNDING.yml                     # GitHub Sponsors configuration
 ├── GETTING_STARTED.md              # Newcomer onboarding
@@ -144,9 +149,12 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── IMPROVEMENTS_SUMMARY.md         # Changelog of improvements
 ├── INCIDENT_RESPONSE.md            # Incident & crisis management
 ├── LEARNING.md                     # Learning paths & education
+├── LEGAL.md                        # Legal compliance, licensing, and IP protection
 ├── LICENSE                         # CC-BY-SA 4.0
+├── LOCALIZATION.md                 # Internationalization and localization for global reach
 ├── MENTORSHIP.md                   # Mentorship program
 ├── METRICS.md                      # Impact measurement
+├── ONBOARDING_AUTOMATION.md        # Automating onboarding while preserving humanity
 ├── PARTNERSHIPS.md                 # Partnership framework
 ├── PERFORMANCE.md                  # Performance standards
 ├── PINNED_REPOSITORIES.md          # Curation recommendations
@@ -167,15 +175,15 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 45 files (~200KB of professional content)
-- **Community Health Files**: 6 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP)
+- **Total Documents**: 49 files (~210KB of professional content)
+- **Community Health Files**: 7 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP, EVENTS)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
 - **Onboarding & Learning**: 4 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING)
-- **Strategic & Governance**: 6 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS)
+- **Strategic & Governance**: 7 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS, LEGAL)
 - **Development Standards**: 7 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE)
 - **People & Culture**: 2 (CONTRIBUTOR_LADDER, RETROSPECTIVES)
 - **Operational Excellence**: 1 (INCIDENT_RESPONSE)
-- **Quality & Collaboration**: 4 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY)
+- **Quality & Collaboration**: 6 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY, LOCALIZATION, ONBOARDING_AUTOMATION)
 - **Repository Management**: 3 (TOPICS, TOPICS_ALIGNED, PINNED)
 
 ## 🌊 Our Philosophy
