@@ -39,6 +39,12 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 - **[CODE_REVIEW.md](./CODE_REVIEW.md)** - Code review standards and best practices
 - **[TESTING.md](./TESTING.md)** - Testing philosophy, standards, and requirements
 - **[DEPRECATION.md](./DEPRECATION.md)** - Deprecation policy and graceful sunsetting
+- **[DESIGN.md](./DESIGN.md)** - Design principles and standards
+- **[PERFORMANCE.md](./PERFORMANCE.md)** - Performance budgets and optimization
+
+### People & Culture
+- **[CONTRIBUTOR_LADDER.md](./CONTRIBUTOR_LADDER.md)** - Career growth pathways from newcomer to core team
+- **[RETROSPECTIVES.md](./RETROSPECTIVES.md)** - Continuous improvement through reflection
 
 ### Operational Excellence
 - **[INCIDENT_RESPONSE.md](./INCIDENT_RESPONSE.md)** - Crisis management and incident resolution
@@ -126,8 +132,10 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── CODE_REVIEW.md                  # Code review guidelines
 ├── COMMUNICATION.md                # Communication & collaboration
 ├── CONTRIBUTING.md                 # Contribution guidelines
+├── CONTRIBUTOR_LADDER.md           # Career growth pathways
 ├── CONTRIBUTORS.md                 # Contributor recognition
 ├── DEPRECATION.md                  # Deprecation policy
+├── DESIGN.md                       # Design principles
 ├── FAQ.md                          # Frequently asked questions
 ├── FUNDING.yml                     # GitHub Sponsors configuration
 ├── GETTING_STARTED.md              # Newcomer onboarding
@@ -140,6 +148,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── MENTORSHIP.md                   # Mentorship program
 ├── METRICS.md                      # Impact measurement
 ├── PARTNERSHIPS.md                 # Partnership framework
+├── PERFORMANCE.md                  # Performance standards
 ├── PINNED_REPOSITORIES.md          # Curation recommendations
 ├── PULL_REQUEST_TEMPLATE.md        # PR template
 ├── README.md                       # This file
@@ -147,6 +156,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── REPOSITORY_TOPICS.md            # Discoverability-focused topics
 ├── REPOSITORY_TOPICS_ALIGNED.md    # ERC-focused topics
 ├── RESEARCH.md                     # Research & publications
+├── RETROSPECTIVES.md               # Continuous improvement
 ├── SECURITY.md                     # Security policy
 ├── STYLE_GUIDE.md                  # Documentation style guide
 ├── SUPPORT.md                      # Support guide
@@ -157,12 +167,13 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 41 files (~185KB of professional content)
+- **Total Documents**: 45 files (~200KB of professional content)
 - **Community Health Files**: 6 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
 - **Onboarding & Learning**: 4 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING)
 - **Strategic & Governance**: 6 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS)
-- **Development Standards**: 5 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION)
+- **Development Standards**: 7 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE)
+- **People & Culture**: 2 (CONTRIBUTOR_LADDER, RETROSPECTIVES)
 - **Operational Excellence**: 1 (INCIDENT_RESPONSE)
 - **Quality & Collaboration**: 4 (STYLE_GUIDE, COMMUNICATION, PARTNERSHIPS, ACCESSIBILITY)
 - **Repository Management**: 3 (TOPICS, TOPICS_ALIGNED, PINNED)
