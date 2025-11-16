@@ -8,6 +8,59 @@ This document outlines our **API design principles and standards** for creating 
 
 ---
 
+## 📋 API Design Quick Reference
+
+### REST Methods & Usage
+
+| Method | Purpose | Example | Response | Idempotent? |
+|--------|---------|---------|----------|-------------|
+| **GET** | Retrieve resource(s) | `GET /users/123` | `200 OK` + data | ✅ Yes |
+| **POST** | Create new resource | `POST /users` | `201 Created` + location | ❌ No |
+| **PUT** | Replace entire resource | `PUT /users/123` | `200 OK` or `204 No Content` | ✅ Yes |
+| **PATCH** | Update part of resource | `PATCH /users/123` | `200 OK` or `204 No Content` | ❌ No (usually) |
+| **DELETE** | Remove resource | `DELETE /users/123` | `204 No Content` | ✅ Yes |
+
+### HTTP Status Codes
+
+| Code | Meaning | When to Use | Example |
+|------|---------|-------------|---------|
+| **200** | OK | Successful GET, PUT, PATCH | Data retrieved successfully |
+| **201** | Created | Successful POST | User created at `/users/456` |
+| **204** | No Content | Successful DELETE, PUT, PATCH with no body | Resource deleted |
+| **400** | Bad Request | Invalid input | Missing required field |
+| **401** | Unauthorized | Missing/invalid auth | No API key provided |
+| **403** | Forbidden | Valid auth but no permission | User can't delete admin |
+| **404** | Not Found | Resource doesn't exist | `/users/99999` not found |
+| **409** | Conflict | Resource state conflict | Email already exists |
+| **422** | Unprocessable Entity | Valid syntax, invalid semantics | Age = -5 (invalid value) |
+| **429** | Too Many Requests | Rate limit exceeded | Try again in 60 seconds |
+| **500** | Internal Server Error | Unexpected server error | Database connection failed |
+
+### Common Patterns Quick Guide
+
+| Pattern | URL Structure | Example |
+|---------|---------------|---------|
+| **List all** | `GET /resources` | `GET /users` |
+| **Get one** | `GET /resources/:id` | `GET /users/123` |
+| **Create** | `POST /resources` | `POST /users` |
+| **Update full** | `PUT /resources/:id` | `PUT /users/123` |
+| **Update partial** | `PATCH /resources/:id` | `PATCH /users/123` |
+| **Delete** | `DELETE /resources/:id` | `DELETE /users/123` |
+| **Nested resource** | `GET /resources/:id/subresources` | `GET /users/123/posts` |
+| **Search/filter** | `GET /resources?query=value` | `GET /users?role=admin` |
+| **Pagination** | `GET /resources?page=2&limit=20` | `GET /users?page=2&limit=20` |
+| **Sorting** | `GET /resources?sort=field:order` | `GET /users?sort=created:desc` |
+
+### Authentication Quick Reference
+
+| Type | Header | Example | Use Case |
+|------|--------|---------|----------|
+| **API Key** | `X-API-Key` | `X-API-Key: abc123...` | Service-to-service |
+| **Bearer Token** | `Authorization` | `Authorization: Bearer jwt...` | User authentication (JWT) |
+| **Basic Auth** | `Authorization` | `Authorization: Basic base64...` | Simple auth (not recommended for production) |
+
+---
+
 ## 🎯 API Design Philosophy
 
 ### What Makes a Great API?
@@ -62,6 +115,46 @@ DELETE /users/123          # Delete user
 ✅ GET    /users/123
 ✅ PATCH  /users/123/status  (with {"status": "active"})
 ```
+
+### Resource Hierarchy Example
+
+Visualizing resource relationships helps design intuitive APIs:
+
+```mermaid
+graph TB
+    API["/api/v1"]
+
+    API --> Users["/users"]
+    API --> Projects["/projects"]
+    API --> Orgs["/organizations"]
+
+    Users --> User["/users/:id"]
+    User --> UserPosts["/users/:id/posts"]
+    User --> UserProfile["/users/:id/profile"]
+    User --> UserSettings["/users/:id/settings"]
+
+    Projects --> Project["/projects/:id"]
+    Project --> ProjectMembers["/projects/:id/members"]
+    Project --> ProjectTasks["/projects/:id/tasks"]
+    Project --> ProjectComments["/projects/:id/comments"]
+
+    Orgs --> Org["/organizations/:id"]
+    Org --> OrgUsers["/organizations/:id/users"]
+    Org --> OrgProjects["/organizations/:id/projects"]
+
+    style API fill:#e1bee7
+    style Users fill:#bbdefb
+    style Projects fill:#c8e6c9
+    style Orgs fill:#fff9c4
+```
+
+**Key relationships:**
+- **Top-level collections** (`/users`, `/projects`) for browsing/creating
+- **Nested resources** (`/users/:id/posts`) show ownership/relationships
+- **Keep nesting shallow** (max 2-3 levels deep for clarity)
+- **Use query params for filtering**, not deep nesting
+
+---
 
 ### HTTP Methods
 
@@ -410,6 +503,56 @@ Authorization: Bearer ya29.a0AfH6SMC...
 - **API keys**: Server-to-server, long-lived credentials
 - **JWT**: User sessions, short-lived tokens
 - **OAuth**: Third-party applications accessing user data
+
+---
+
+### Authentication Flow (JWT Example)
+
+Typical JWT authentication flow for user APIs:
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant API
+    participant Auth
+    participant DB
+
+    Client->>API: POST /auth/login<br/>{email, password}
+    API->>Auth: Verify credentials
+    Auth->>DB: Query user
+    DB-->>Auth: User found
+    Auth-->>API: Credentials valid
+
+    API-->>Client: 200 OK<br/>{token: "jwt...", expiresIn: 3600}
+
+    Note over Client: Store JWT (localStorage, cookie)
+
+    Client->>API: GET /api/users/me<br/>Authorization: Bearer jwt...
+    API->>Auth: Validate JWT
+    Auth-->>API: Valid, userId=123
+
+    API->>DB: Query user 123
+    DB-->>API: User data
+    API-->>Client: 200 OK<br/>{user data}
+
+    Note over Client,API: Subsequent requests include JWT
+
+    Client->>API: PATCH /api/users/me<br/>Authorization: Bearer jwt...
+    API->>Auth: Validate JWT
+    Auth-->>API: Valid, userId=123
+    API->>DB: Update user 123
+    DB-->>API: Updated
+    API-->>Client: 200 OK
+```
+
+**Flow steps:**
+1. **Login**: User provides credentials → API returns JWT
+2. **Store token**: Client saves JWT (localStorage, cookie, memory)
+3. **Include in requests**: Client sends `Authorization: Bearer {jwt}` header
+4. **Validate**: API validates JWT on each request
+5. **Expire**: JWT expires after set time (e.g., 1 hour) → User must re-authenticate
+
+---
 
 ### Authorization
 

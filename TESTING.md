@@ -6,6 +6,48 @@ This guide defines testing philosophy, standards, and practices across all Lumin
 
 ---
 
+## 📋 Testing Quick Reference
+
+**When to Use Each Test Type:**
+
+| Scenario | Test Type | Speed | Example | Coverage Goal |
+|----------|-----------|-------|---------|---------------|
+| Single function logic | Unit | ⚡ <1s | `calculateTrust(0.8)` → `0.8` | 70% of tests |
+| Multiple components | Integration | 🚶 1-10s | API + Database query | 20% of tests |
+| Full user workflow | E2E | 🐢 10-60s | Login → Create → Logout | 10% of tests |
+| UI components | Component | ⚡ <1s | Button renders correctly | Part of unit tests |
+| External APIs | Contract | 🚶 1-5s | API schema matches | As needed |
+
+**Test Decision Tree:**
+
+```
+What are you testing?
+├─ Single function/method → Unit Test
+├─ 2-3 components together → Integration Test
+├─ Full user journey → E2E Test
+├─ UI component → Component Test
+└─ External API → Contract Test
+```
+
+**Common Commands:**
+
+| Task | Command | When |
+|------|---------|------|
+| Run all tests | `npm test` / `cargo test` / `pytest` | Before committing |
+| Run specific test | `npm test user.test.js` | Debugging |
+| Watch mode | `npm test -- --watch` | During development |
+| Coverage report | `npm test -- --coverage` | Before PR |
+| Update snapshots | `npm test -- -u` | UI changes |
+
+**Coverage Targets:**
+
+- 🎯 **70%+ overall** - Good baseline
+- 🎯 **90%+ critical paths** - Auth, payments, data integrity
+- 🎯 **100% new code** - All new functions tested
+- ❌ **Don't chase 100%** - Diminishing returns, focus on value
+
+---
+
 ## 🎯 Testing Philosophy
 
 ### Why We Test

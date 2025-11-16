@@ -220,6 +220,54 @@ nix develop
 
 ## 🎓 Learning Paths
 
+**Visual Overview:**
+
+```mermaid
+flowchart TB
+    Start([👋 Welcome to<br/>Luminous Dynamics]) --> Choice{What's your<br/>primary interest?}
+
+    Choice -->|Philosophy & Vision| ERC[Path 1:<br/>Understanding ERC<br/>⏱️ 1-2 hours]
+    Choice -->|Code & Build| Tech[Path 2:<br/>Technical Exploration<br/>⏱️ 2-4 hours]
+    Choice -->|Community & Support| Comm[Path 3:<br/>Community Immersion<br/>⏱️ Ongoing]
+
+    ERC --> ERC1[Read ERC Philosophy]
+    ERC1 --> ERC2[Review Vision & Roadmap]
+    ERC2 --> ERC3[Explore Codex Patterns]
+    ERC3 --> ERC4[Reflect on Consciousness-First]
+    ERC4 --> Contribute{Ready to<br/>contribute?}
+
+    Tech --> Tech1[Choose Project<br/>Python/Rust/TypeScript]
+    Tech1 --> Tech2[Clone & Setup Dev Env]
+    Tech2 --> Tech3[Run Project Locally]
+    Tech3 --> Tech4[Read Codebase Architecture]
+    Tech4 --> Tech5[Find good-first-issue]
+    Tech5 --> Contribute
+
+    Comm --> Comm1[Star Interesting Repos]
+    Comm1 --> Comm2[Watch Updates & Releases]
+    Comm2 --> Comm3[Join Weekly Discussions]
+    Comm3 --> Comm4[Help Answer Questions]
+    Comm4 --> Comm5[Contribute Docs]
+    Comm5 --> Comm6[Build Relationships]
+    Comm6 --> Contribute
+
+    Contribute -->|Yes| FirstPR[Make Your<br/>First Contribution!<br/>✨]
+    Contribute -->|Not yet| Loop{Want to explore<br/>another path?}
+    Loop -->|Yes| Choice
+    Loop -->|No| Stay[Stay Connected<br/>Take Your Time 💚]
+
+    FirstPR --> Celebrate[🎉 Celebrate!<br/>You're a Contributor]
+
+    style Start fill:#e1bee7
+    style ERC fill:#fff9c4
+    style Tech fill:#bbdefb
+    style Comm fill:#c8e6c9
+    style FirstPR fill:#ffccbc
+    style Celebrate fill:#f8bbd0
+```
+
+**Choose your path(s)—they all lead to meaningful contribution:**
+
 ### Path 1: Understanding ERC (1-2 hours)
 1. Read [ERC Philosophy](https://github.com/Luminous-Dynamics/evolving-resonant-cocreationism) introduction
 2. Review our [Vision & Roadmap](./VISION_AND_ROADMAP.md)
