@@ -13,7 +13,9 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ## 📖 Documentation Index
 
 ### Getting Started
+- **[QUICK_START.md](./QUICK_START.md)** - ⚡ 5-minute quick start for the impatient
 - **[GETTING_STARTED.md](./GETTING_STARTED.md)** - Complete newcomer onboarding guide
+- **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** - Common issues and solutions
 - **[FAQ.md](./FAQ.md)** - Frequently asked questions
 - **[GLOSSARY.md](./GLOSSARY.md)** - Terminology and concepts explained
 - **[LEARNING.md](./LEARNING.md)** - Learning paths and educational resources
@@ -188,6 +190,7 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── PINNED_REPOSITORIES.md          # Curation recommendations
 ├── PLAYBOOKS.md                    # Tactical step-by-step guides for common scenarios
 ├── PULL_REQUEST_TEMPLATE.md        # PR template
+├── QUICK_START.md                  # 5-minute quick start guide
 ├── README.md                       # This file
 ├── RELEASES.md                     # Release process
 ├── REPOSITORY_TOPICS.md            # Discoverability-focused topics
@@ -202,15 +205,16 @@ Luminous Dynamics is building **Coherence as a Service (CaaS)** - consciousness 
 ├── SUSTAINABILITY.md               # Funding & sustainability model
 ├── TEMPLATES.md                    # Copy-paste templates for common tasks
 ├── TESTING.md                      # Testing standards
+├── TROUBLESHOOTING.md              # Common issues and solutions
 └── VISION_AND_ROADMAP.md           # Strategic vision (2025-2032)
 ```
 
 ## 📊 Documentation Stats
 
-- **Total Documents**: 65 files (~320KB of comprehensive, actionable content)
+- **Total Documents**: 67 files (~360KB of comprehensive, actionable content with visual diagrams)
 - **Community Health Files**: 7 (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, CONTRIBUTORS, MENTORSHIP, EVENTS)
 - **GitHub Automation**: 3 workflows + 4 issue templates + 3 discussion templates
-- **Onboarding & Learning**: 5 (GETTING_STARTED, FAQ, GLOSSARY, LEARNING, PLAYBOOKS)
+- **Onboarding & Learning**: 7 (QUICK_START, GETTING_STARTED, TROUBLESHOOTING, FAQ, GLOSSARY, LEARNING, PLAYBOOKS)
 - **Strategic & Governance**: 10 (VISION_AND_ROADMAP, GOVERNANCE, SUSTAINABILITY, METRICS, RESEARCH, IMPROVEMENTS, LEGAL, INNOVATION, OPEN_SOURCE_GUIDE, DATA_PRIVACY)
 - **Development Standards**: 17 (ADR, RELEASES, CODE_REVIEW, TESTING, DEPRECATION, DESIGN, PERFORMANCE, DEVELOPER_EXPERIENCE, API_DESIGN, OBSERVABILITY, DEPENDENCIES, CI_CD, INFRASTRUCTURE, DEPLOYMENT, ENVIRONMENTS, SCALING, DOCUMENTATION_PRACTICES)
 - **People & Culture**: 3 (CONTRIBUTOR_LADDER, RETROSPECTIVES, RECOGNITION)
