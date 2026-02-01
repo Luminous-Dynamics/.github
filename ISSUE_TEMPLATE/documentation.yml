@@ -1,0 +1,148 @@
+name: Documentation Issue
+description: Report missing, incorrect, unclear, or outdated documentation
+title: "[DOCS] "
+labels: ["documentation", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation Issue
+
+        Thank you for helping improve Mycelix documentation! Good documentation is essential
+        for adoption and developer experience.
+
+        Please describe the documentation issue in detail below.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Type of Documentation Issue
+      description: What kind of documentation issue is this?
+      options:
+        - Missing (Documentation doesn't exist for this topic)
+        - Incorrect (Documentation contains errors or wrong information)
+        - Unclear (Documentation is confusing or hard to understand)
+        - Outdated (Documentation doesn't reflect current behavior)
+        - Incomplete (Documentation exists but lacks important details)
+        - Broken Links (Links in documentation are broken)
+        - Typo/Grammar (Minor text issues)
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: |
+        Where is this documentation located? Provide a file path, URL, or describe where it should be.
+      placeholder: "e.g., docs/getting-started.md, https://mycelix.dev/api/identity, or 'README'"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc-category
+    attributes:
+      label: Documentation Category
+      description: What category does this documentation belong to?
+      options:
+        - Getting Started / Installation
+        - API Reference
+        - Tutorials / Guides
+        - Architecture / Design
+        - Configuration
+        - CLI Reference
+        - Contributing Guide
+        - Security Documentation
+        - Deployment / Operations
+        - Troubleshooting
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: |
+        Describe the current state of the documentation.
+        For existing docs, quote the problematic section. For missing docs, describe what you expected to find.
+      placeholder: |
+        For incorrect/unclear docs:
+        > Quote the problematic text here
+
+        For missing docs:
+        I was looking for documentation about X but couldn't find it...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: |
+        How should the documentation be improved?
+        If you have specific text suggestions, please include them.
+      placeholder: |
+        The documentation should:
+        - Explain how to...
+        - Include an example of...
+        - Update the outdated information about...
+
+        Suggested text:
+        ```
+        Your suggested documentation text here...
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: |
+        Any additional context about the documentation issue.
+        What were you trying to do when you encountered this issue?
+      placeholder: |
+        I was trying to...
+        This documentation would help users who want to...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
+      options:
+        - New Users (Getting started)
+        - Application Developers (Building on Mycelix)
+        - Node Operators (Running infrastructure)
+        - Core Contributors (Contributing to Mycelix)
+        - Security Researchers
+        - All Users
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution Interest
+      description: Let us know if you'd like to help
+      options:
+        - label: I would be willing to submit a PR to fix this documentation issue
+          required: false
+        - label: I can provide additional examples or use cases
+          required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues to ensure this hasn't already been reported
+          required: true
+        - label: I have checked the latest version of the documentation
+          required: true

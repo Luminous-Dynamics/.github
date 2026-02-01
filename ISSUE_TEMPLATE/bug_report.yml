@@ -1,0 +1,180 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Mycelix
+title: "[BUG] "
+labels: ["bug", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+
+        Thank you for taking the time to report a bug in Mycelix. Please fill out the form below as completely as possible to help us investigate and resolve the issue quickly.
+
+        **Note:** For security vulnerabilities, please use the [Security Vulnerability template](https://github.com/Luminous-Dynamics/Mycelix/security/advisories/new) instead.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug
+      placeholder: Describe the bug you encountered...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        1. Start the node with '...'
+        2. Execute command '...'
+        3. Observe error in '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: Describe what should have happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: Describe what actually happened instead...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component of Mycelix is affected?
+      options:
+        - Core
+        - Identity
+        - Marketplace
+        - Mail
+        - Governance
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical (System crash, data loss, security issue)
+        - High (Major feature broken, no workaround)
+        - Medium (Feature impaired, workaround exists)
+        - Low (Minor inconvenience, cosmetic issue)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Environment Information
+
+        Please provide details about your environment to help us reproduce the issue.
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: Your operating system and version
+      placeholder: "e.g., Ubuntu 22.04, macOS 14.0, Windows 11"
+    validations:
+      required: true
+
+  - type: input
+    id: rust-version
+    attributes:
+      label: Rust Version
+      description: Output of `rustc --version`
+      placeholder: "e.g., rustc 1.75.0 (82e1608df 2023-12-21)"
+    validations:
+      required: false
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python Version
+      description: Output of `python --version` (if applicable)
+      placeholder: "e.g., Python 3.11.6"
+    validations:
+      required: false
+
+  - type: input
+    id: holochain-version
+    attributes:
+      label: Holochain Version
+      description: Output of `holochain --version` or version from Cargo.toml
+      placeholder: "e.g., holochain 0.3.0"
+    validations:
+      required: false
+
+  - type: input
+    id: mycelix-version
+    attributes:
+      label: Mycelix Version
+      description: Version or commit hash of Mycelix
+      placeholder: "e.g., v0.1.0 or commit abc1234"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and Error Messages
+      description: |
+        Please paste any relevant logs or error messages.
+        Tip: You can attach log files by dragging and dropping them into this field.
+      placeholder: |
+        ```
+        Paste logs here...
+        ```
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain the problem
+      placeholder: Drag and drop images here or paste image URLs...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem
+      placeholder: Add any other relevant information...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues to ensure this bug hasn't already been reported
+          required: true
+        - label: I have provided all the requested information
+          required: true
+        - label: I am running the latest version of Mycelix (or have noted my version above)
+          required: false

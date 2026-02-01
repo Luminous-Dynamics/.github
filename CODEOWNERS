@@ -1,0 +1,141 @@
+# Mycelix CODEOWNERS
+#
+# This file defines the default reviewers for different parts of the codebase.
+# When a pull request modifies files matching a pattern, the corresponding
+# owners will automatically be requested for review.
+#
+# Order matters: later patterns take precedence over earlier ones.
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# =============================================================================
+# Default Owners - Applied to all files unless overridden below
+# =============================================================================
+
+*                                       @luminous-dynamics/core-team
+
+# =============================================================================
+# Core Runtime
+# =============================================================================
+
+/src/core/                              @luminous-dynamics/runtime-team
+/src/runtime/                           @luminous-dynamics/runtime-team
+/crates/mycelix-core/                   @luminous-dynamics/runtime-team
+
+# =============================================================================
+# Networking
+# =============================================================================
+
+/src/network/                           @luminous-dynamics/network-team
+/src/p2p/                               @luminous-dynamics/network-team
+/crates/mycelix-network/                @luminous-dynamics/network-team
+/crates/mycelix-transport/              @luminous-dynamics/network-team
+
+# =============================================================================
+# Consensus
+# =============================================================================
+
+/src/consensus/                         @luminous-dynamics/consensus-team
+/crates/mycelix-consensus/              @luminous-dynamics/consensus-team
+/crates/mycelix-bft/                    @luminous-dynamics/consensus-team
+
+# =============================================================================
+# Cryptography - Requires security review
+# =============================================================================
+
+/src/crypto/                            @luminous-dynamics/security-team @luminous-dynamics/crypto-team
+/crates/mycelix-crypto/                 @luminous-dynamics/security-team @luminous-dynamics/crypto-team
+**/signing*                             @luminous-dynamics/security-team
+**/encryption*                          @luminous-dynamics/security-team
+**/keys*                                @luminous-dynamics/security-team
+
+# =============================================================================
+# Smart Contracts
+# =============================================================================
+
+/contracts/                             @luminous-dynamics/contracts-team
+/contracts/**/*.sol                     @luminous-dynamics/contracts-team @luminous-dynamics/security-team
+/crates/mycelix-contracts/              @luminous-dynamics/contracts-team
+
+# =============================================================================
+# Client SDKs
+# =============================================================================
+
+/sdk/                                   @luminous-dynamics/sdk-team
+/sdk/rust/                              @luminous-dynamics/sdk-team @luminous-dynamics/runtime-team
+/sdk/typescript/                        @luminous-dynamics/sdk-team @luminous-dynamics/frontend-team
+/sdk/python/                            @luminous-dynamics/sdk-team
+
+# =============================================================================
+# CLI and Tools
+# =============================================================================
+
+/cli/                                   @luminous-dynamics/tools-team
+/tools/                                 @luminous-dynamics/tools-team
+/crates/mycelix-cli/                    @luminous-dynamics/tools-team
+
+# =============================================================================
+# API and Services
+# =============================================================================
+
+/api/                                   @luminous-dynamics/api-team
+/src/api/                               @luminous-dynamics/api-team
+/services/                              @luminous-dynamics/api-team
+
+# =============================================================================
+# Frontend
+# =============================================================================
+
+/web/                                   @luminous-dynamics/frontend-team
+/dashboard/                             @luminous-dynamics/frontend-team
+*.tsx                                   @luminous-dynamics/frontend-team
+*.ts                                    @luminous-dynamics/frontend-team
+
+# =============================================================================
+# Documentation
+# =============================================================================
+
+/docs/                                  @luminous-dynamics/docs-team
+*.md                                    @luminous-dynamics/docs-team
+README*                                 @luminous-dynamics/docs-team @luminous-dynamics/core-team
+
+# =============================================================================
+# Build and CI/CD
+# =============================================================================
+
+/.github/                               @luminous-dynamics/devops-team
+/.github/workflows/                     @luminous-dynamics/devops-team
+/scripts/                               @luminous-dynamics/devops-team
+Dockerfile*                             @luminous-dynamics/devops-team
+docker-compose*.yml                     @luminous-dynamics/devops-team
+Makefile                                @luminous-dynamics/devops-team
+
+# =============================================================================
+# Configuration Files
+# =============================================================================
+
+Cargo.toml                              @luminous-dynamics/core-team
+Cargo.lock                              @luminous-dynamics/core-team
+package.json                            @luminous-dynamics/frontend-team
+pnpm-lock.yaml                          @luminous-dynamics/frontend-team
+pyproject.toml                          @luminous-dynamics/sdk-team
+foundry.toml                            @luminous-dynamics/contracts-team
+
+# =============================================================================
+# Security-Critical Files - Always require security review
+# =============================================================================
+
+SECURITY.md                             @luminous-dynamics/security-team
+/security/                              @luminous-dynamics/security-team
+**/auth*                                @luminous-dynamics/security-team
+**/permission*                          @luminous-dynamics/security-team
+**/access*                              @luminous-dynamics/security-team
+
+# =============================================================================
+# Project Governance
+# =============================================================================
+
+CONTRIBUTING.md                         @luminous-dynamics/core-team @luminous-dynamics/docs-team
+CODE_OF_CONDUCT.md                      @luminous-dynamics/core-team
+LICENSE*                                @luminous-dynamics/core-team
+AUTHORS.md                              @luminous-dynamics/core-team
+CHANGELOG.md                            @luminous-dynamics/core-team @luminous-dynamics/docs-team

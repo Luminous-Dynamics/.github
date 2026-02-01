@@ -1,0 +1,179 @@
+name: Testnet Feedback
+description: Report issues, feedback, or observations from running on the testnet
+title: "[TESTNET] "
+labels: ["testnet", "feedback", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Testnet Feedback
+
+        Thank you for participating in the Mycelix testnet! Your feedback is invaluable
+        for improving the network before mainnet launch.
+
+        Please provide as much detail as possible about your experience.
+
+  - type: input
+    id: node-id
+    attributes:
+      label: Node ID
+      description: |
+        Your testnet node ID (optional, but helps us correlate with network data).
+        You can find this in your node's configuration or logs.
+      placeholder: "e.g., myc1abc123... or leave blank for anonymity"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of testnet issue are you reporting?
+      options:
+        - Performance (Slow transactions, high latency, resource usage)
+        - Connectivity (Network issues, peer discovery, sync problems)
+        - Byzantine Detection (False positives, missed detections, consensus issues)
+        - Stability (Crashes, restarts, memory leaks)
+        - Data Integrity (State inconsistencies, missing data)
+        - User Experience (CLI issues, confusing behavior)
+        - Positive Feedback (Something working well!)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: testnet-phase
+    attributes:
+      label: Testnet Phase
+      description: Which testnet phase are you participating in?
+      options:
+        - Alpha Testnet
+        - Beta Testnet
+        - Stress Test Event
+        - Incentivized Testnet
+        - Other/Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe your testnet experience or issue in detail
+      placeholder: |
+        What happened?
+        When did it happen?
+        How often does it occur?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Node Environment
+      description: Describe your node setup and environment
+      placeholder: |
+        - Hardware: (CPU, RAM, Disk)
+        - OS: (e.g., Ubuntu 22.04)
+        - Network: (Home connection, VPS, cloud provider)
+        - Mycelix version:
+        - Node uptime:
+        - Geographic region:
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Observed Metrics
+      description: |
+        If you have metrics or measurements to share, include them here.
+        Transaction throughput, latency, resource usage, etc.
+      placeholder: |
+        - Transaction latency: ~X ms
+        - Memory usage: X GB
+        - CPU usage: X%
+        - Peer count: X
+        - Block height: X
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: |
+        Paste any relevant log output. Please redact any sensitive information.
+        For large logs, consider using a paste service and linking here.
+      placeholder: |
+        ```
+        [timestamp] [level] Your log output here...
+        ```
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: network-observations
+    attributes:
+      label: Network Observations
+      description: |
+        Any observations about the broader network behavior?
+        Unusual patterns, network-wide issues, or interesting behaviors.
+      placeholder: |
+        - Observed network partitions at...
+        - Noticed increased latency when...
+        - Byzantine behavior detected from peers...
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce (if applicable)
+      description: If this is a reproducible issue, describe how to trigger it
+      placeholder: |
+        1. Start node with configuration...
+        2. Wait for sync to complete...
+        3. Execute operation...
+        4. Observe issue...
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions
+      description: Any suggestions for improvements based on your testnet experience?
+      placeholder: |
+        Based on my experience, I suggest...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: data-sharing
+    attributes:
+      label: Data Sharing Consent
+      description: Help us improve by sharing additional data
+      options:
+        - label: I consent to the team accessing my node's public metrics for debugging
+          required: false
+        - label: I'm willing to be contacted for follow-up questions
+          required: false
+        - label: I'm interested in participating in future testnet phases
+          required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have checked that my node is running the latest testnet version
+          required: true
+        - label: I have redacted any sensitive information from logs
+          required: true
+        - label: I have searched existing issues for similar testnet reports
+          required: false

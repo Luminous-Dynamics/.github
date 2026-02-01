@@ -1,0 +1,26 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Discord Community
+    url: https://discord.gg/mycelix
+    about: |
+      Join our Discord for real-time discussions, questions, and community support.
+      Great for quick questions and connecting with other Mycelix users and developers.
+
+  - name: Security Vulnerabilities
+    url: mailto:security@luminous-dynamics.org
+    about: |
+      For sensitive security issues, please email our security team directly.
+      PGP key available in SECURITY.md. We follow responsible disclosure practices.
+
+  - name: GitHub Discussions
+    url: https://github.com/Luminous-Dynamics/Mycelix/discussions
+    about: |
+      For general questions, ideas, and community discussions that don't fit
+      into the issue templates above.
+
+  - name: Documentation
+    url: https://docs.mycelix.dev
+    about: |
+      Check our documentation for guides, API references, and tutorials.
+      Many common questions are answered there.
