@@ -56,6 +56,27 @@ Luminous Dynamics does not claim that its systems prove artificial consciousness
 
 We build experimental infrastructure for studying these questions honestly.
 
+## Structural Love
+
+Luminous Dynamics is guided by **Structural Love**:
+
+> **Love is the disciplined, joyful co-creation of becoming, bounded by truth, consent, repair, and irreducible dignity.**
+
+The ten principles of Structural Love are:
+
+1. **Love is rigorous, playful, co-creative becoming.**
+2. **Love is attention without possession.**
+3. **Love is power under consent.**
+4. **Love is truth with care.**
+5. **Love is difference without domination.**
+6. **Love is repair over discard.**
+7. **Love is abundance within limits.**
+8. **Love is freedom with responsibility.**
+9. **Love is joy with accountability.**
+10. **Love is irreducible dignity.**
+
+These principles guide how we design cognitive systems, civic infrastructure, governance tools, research practices, and open-source communities.
+
 ## Start Here
 
 | Repository                                                          | Purpose                                                                  |
