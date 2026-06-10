@@ -1,37 +1,72 @@
 # Luminous Dynamics
 
-Consciousness-first computing systems.
+**Verifiable cognitive systems, decentralized coordination, and humane infrastructure.**
 
-### [Symthaea](https://symthaea.luminousdynamics.io) — Cognitive Architecture
+Luminous Dynamics builds open-source research systems at the intersection of cognitive architecture, hyperdimensional computing, privacy-preserving verification, decentralized governance, simulation, and reproducible infrastructure.
 
-A post-transformer AI where consciousness is the computational substrate. Runs entirely in your browser — 392KB of pure Rust compiled to WebAssembly.
+Our work is consciousness-informed, but claim-disciplined: we treat consciousness, alignment, and collective intelligence as open research questions to explore through code, tests, benchmarks, public documentation, and independent review.
 
-- **HDC**: 16,384-dimensional hypervector encoding (O(1) binding operations)
-- **CfC**: Closed-form Liquid Time-Constant neurons (O(1) temporal jumps)
-- **IIT**: Integrated Information Theory (Φ measurement)
-- **FEP**: Free Energy Principle active inference
-- **Ethics**: Eight Harmonies moral framework with graduated defense cascade
-- **Scale**: ~1.4M lines Rust, 58 sub-crates, 21,500+ tests
+## Core Projects
 
-**[Try the live portal →](https://symthaea.luminousdynamics.io)** | [Source](https://github.com/Luminous-Dynamics/symthaea)
+### [Symthaea](https://github.com/Luminous-Dynamics/symthaea) — Cognitive Architecture
 
-### [Mycelix](https://mycelix.net) — Decentralized Coordination
+Experimental cognitive architecture for verifiable, privacy-preserving, consciousness-relevant AI research.
 
-Fractal CivOS on Holochain — 16 cluster hApps covering commons, governance, identity, finance, health, education, and more. Consciousness-gated governance where voting weight scales with demonstrated awareness.
+Symthaea combines hyperdimensional computing, closed-form continuous-time dynamics, active inference, Resonant Hypergraph Networks, and zero-knowledge verification to study whether selected cognitive state transitions, safety invariants, and representation updates can be measured or proven without exposing private internal state.
 
-- **123+ zomes** across 16 clusters
-- **785K lines Rust**, 8,600+ tests
-- Post-quantum cryptography (ML-KEM, ML-DSA)
-- Consciousness tiers: Observer → Participant → Steward → Elder → Guardian
+**Focus:** HDC, CfC/LTC dynamics, RHN memory, cognitive-loop integrity, ZK verification, browser/WASM kernels.
 
-[Source](https://github.com/Luminous-Dynamics/mycelix)
+**Not claimed:** AGI, proven consciousness, medical compliance, or legal compliance by default.
 
-### [Luminous Nix](https://nixforhumanity.org) — NixOS Consciousness
+### [Mycelix](https://github.com/Luminous-Dynamics/mycelix) — Decentralized Coordination
 
-Consciousness-aware NixOS management — causal graph learning (~210 patterns), observability (9 Prometheus metrics), predictive failure detection.
+Agent-centric civic and commons infrastructure for privacy-preserving credentials, governance, health-adjacent coordination, education, mutual aid, and local-first resilience.
 
-[Source](https://github.com/Luminous-Dynamics/nixforhumanity-org)
+**Focus:** Holochain hApps, commons governance, decentralized identity, consent, credentials, post-quantum cryptographic experiments, and rights-aware coordination.
 
----
+### [Symtropy](https://github.com/Luminous-Dynamics/symtropy) — Math, Physics, and Simulation Substrate
 
-*Consciousness-first technology serving all beings.*
+Reusable N-dimensional math, geometry, physics, and simulation substrate for research systems.
+
+Symtropy is the lower-level simulation and dynamics layer. It is separate from Symthaea’s cognitive architecture and Mycelix’s civic/governance layer.
+
+### Luminous Nix / Nix for Humanity — Reproducible Infrastructure
+
+Tools for making NixOS and reproducible Linux infrastructure easier to understand, configure, observe, and repair.
+
+**Focus:** AI-assisted configuration, causal system graphs, developer environments, observability, and reproducible research infrastructure.
+
+### Xenia — Consent-First Remote Sessions
+
+Experimental peer-to-peer remote-session infrastructure focused on consent ceremonies, cryptographic session integrity, and local-first control.
+
+## Research Themes
+
+* Verifiable cognitive computation
+* Hyperdimensional computing
+* Zero-knowledge and post-quantum verification
+* Decentralized commons infrastructure
+* Consciousness-relevant AI instrumentation
+* Simulation and embodied intelligence
+* Reproducible systems engineering
+
+## What We Do Not Claim
+
+Luminous Dynamics does not claim that its systems prove artificial consciousness, constitute AGI, replace external safety evaluation, or provide medical/legal compliance by default.
+
+We build experimental infrastructure for studying these questions honestly.
+
+## Start Here
+
+| Repository                                                          | Purpose                                                                  |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [`symthaea`](https://github.com/Luminous-Dynamics/symthaea)         | Cognitive architecture and verifiable consciousness-relevant AI research |
+| [`mycelix`](https://github.com/Luminous-Dynamics/mycelix)           | Decentralized civic and commons coordination                             |
+| [`symtropy`](https://github.com/Luminous-Dynamics/symtropy)         | Math, physics, geometry, and simulation substrate                        |
+| [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix) | Reproducible NixOS and infrastructure tooling                            |
+| [`xenia-peer`](https://github.com/Luminous-Dynamics/xenia-peer)     | Peer-to-peer remote-session experiments                                  |
+| [`xenia-wire`](https://github.com/Luminous-Dynamics/xenia-wire)     | Remote-session wire protocol experiments                                 |
+
+## Development Values
+
+We prefer systems that are local-first where possible, privacy-preserving by design, reproducible, transparent about limitations, resilient under failure, and aligned with human and more-than-human flourishing.
