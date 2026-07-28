@@ -30,15 +30,13 @@ Reusable N-dimensional math, geometry, physics, and simulation substrate for res
 
 Symtropy is the lower-level simulation and dynamics layer. It is separate from Symthaea’s cognitive architecture and Mycelix’s civic/governance layer.
 
-### Luminous Nix / Nix for Humanity — Reproducible Infrastructure
+### [Nix Signature Policy](https://github.com/Luminous-Dynamics/nix-signature-policy) — Reproducible Infrastructure
 
-Tools for making NixOS and reproducible Linux infrastructure easier to understand, configure, observe, and repair.
+Reference implementation and conformance suite for composable, downgrade-resistant signature policy for Nix. This is the active NixOS-adjacent work today — [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix), the earlier natural-language-to-NixOS project, is archived (see Historical below).
 
-**Focus:** AI-assisted configuration, causal system graphs, developer environments, observability, and reproducible research infrastructure.
+### [Xenia](https://github.com/Luminous-Dynamics/xenia-peer) — Consent-First Remote Sessions
 
-### Xenia — Consent-First Remote Sessions
-
-Experimental peer-to-peer remote-session infrastructure focused on consent ceremonies, cryptographic session integrity, and local-first control.
+Peer-to-peer remote-session infrastructure: [`xenia-wire`](https://github.com/Luminous-Dynamics/xenia-wire) (PQC-sealed wire protocol) + [`xenia-peer`](https://github.com/Luminous-Dynamics/xenia-peer) (daemon/viewer application layer). Pre-alpha — consent ceremonies, cryptographic session integrity, and local-first control are the design center, not yet a finished security story. See each repo's README for exact status.
 
 ## Research Themes
 
@@ -79,14 +77,35 @@ These principles guide how we design cognitive systems, civic infrastructure, go
 
 ## Start Here
 
-| Repository                                                          | Purpose                                                                  |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [`symthaea`](https://github.com/Luminous-Dynamics/symthaea)         | Cognitive architecture and verifiable consciousness-relevant AI research |
-| [`mycelix`](https://github.com/Luminous-Dynamics/mycelix)           | Decentralized civic and commons coordination                             |
-| [`symtropy`](https://github.com/Luminous-Dynamics/symtropy)         | Math, physics, geometry, and simulation substrate                        |
-| [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix) | Reproducible NixOS and infrastructure tooling                            |
-| [`xenia-peer`](https://github.com/Luminous-Dynamics/xenia-peer)     | Peer-to-peer remote-session experiments                                  |
-| [`xenia-wire`](https://github.com/Luminous-Dynamics/xenia-wire)     | Remote-session wire protocol experiments                                 |
+*(This table used to point at `luminous-nix` and `terra-atlas` as if they were live — both are archived. If you land on this org page from a search result or pinned-repo list showing either of those, you're looking at historical work; the table below is the current map.)*
+
+### Active flagships
+
+| Repository | Purpose |
+| --- | --- |
+| [`symthaea`](https://github.com/Luminous-Dynamics/symthaea) | Cognitive architecture and verifiable consciousness-relevant AI research |
+| [`mycelix`](https://github.com/Luminous-Dynamics/mycelix) | Decentralized civic and commons coordination |
+| [`symtropy`](https://github.com/Luminous-Dynamics/symtropy) | Math, physics, geometry, and simulation substrate |
+| [`xenia-peer`](https://github.com/Luminous-Dynamics/xenia-peer) / [`xenia-wire`](https://github.com/Luminous-Dynamics/xenia-wire) | Consent-first peer-to-peer remote sessions (pre-alpha) |
+| [`nix-signature-policy`](https://github.com/Luminous-Dynamics/nix-signature-policy) | Composable, downgrade-resistant Nix signature policy |
+
+### Experimental laboratories
+
+| Repository | Purpose |
+| --- | --- |
+| [`spark-engine`](https://github.com/Luminous-Dynamics/spark-engine) | Physics-honest toolkit for Lattice Confinement Fusion anomaly investigation |
+| [`symtropy-consciousness-physics`](https://github.com/Luminous-Dynamics/symtropy-consciousness-physics) | Multi-agent by-product mutualism research |
+| [`scap`](https://github.com/Luminous-Dynamics/scap) | Cross-platform screen-capture library (used by Xenia) |
+| [`kitsune2-transport-dtn`](https://github.com/Luminous-Dynamics/kitsune2-transport-dtn) | Kitsune2 transport backed by BPv7/DTN store-and-forward |
+
+### Historical / archived
+
+| Repository | Successor / current status |
+| --- | --- |
+| [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix) | Archived. Natural-language-to-NixOS translation research; see `nix-signature-policy` for the active Nix-adjacent work |
+| [`terra-atlas`](https://github.com/Luminous-Dynamics/terra-atlas) | Archived. Superseded by `terra-atlas-leptos` |
+
+Everything else in this org not listed above is either a supporting library for one of the active flagships, or older/exploratory work not currently maintained as a standalone product — check a given repo's own README and archive status before treating it as current.
 
 ## Development Values
 
