@@ -1,6 +1,8 @@
-# These are supported funding model platforms
+# These are supported funding model platforms.
+# Keep both the organization and maintainer sponsorship routes visible so
+# supporters can fund the commons at the level that best fits them.
 
-github: [Tristan-Stoltz-ERC]
+github: [Luminous-Dynamics, Tristan-Stoltz-ERC]
 ko_fi: luminousdynamics
 # patreon: # Replace with your Patreon username
 # open_collective: # Replace with your Open Collective username
