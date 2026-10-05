@@ -32,7 +32,7 @@ Symtropy is the lower-level simulation and dynamics layer. It is separate from S
 
 ### [Nix Signature Policy](https://github.com/Luminous-Dynamics/nix-signature-policy) — Reproducible Infrastructure
 
-Reference implementation and conformance suite for composable, downgrade-resistant signature policy for Nix. This is the active NixOS-adjacent work today — [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix), the earlier natural-language-to-NixOS project, is archived (see Historical below).
+Reference implementation and conformance suite for composable, downgrade-resistant signature policy for Nix. [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix)
 
 ### [Xenia](https://github.com/Luminous-Dynamics/xenia-peer) — Consent-First Remote Sessions
 
