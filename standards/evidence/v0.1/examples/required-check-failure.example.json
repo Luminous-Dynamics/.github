@@ -1,0 +1,45 @@
+{
+  "profile": "https://github.com/Luminous-Dynamics/.github/blob/main/standards/evidence/v0.1/README.md",
+  "claim": "A deliberately invalid authorization request is rejected by policy.",
+  "subject": [
+    {
+      "name": "example-host-change",
+      "kind": "decision",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      }
+    }
+  ],
+  "run": {
+    "runId": "example-run-002",
+    "startedAt": "2026-11-02T10:00:00Z",
+    "completedAt": "2026-11-02T10:00:01Z",
+    "executor": "policy-test-harness",
+    "softwareRevision": "test-commit",
+    "environment": {
+      "scenario": "missing-authorization"
+    },
+    "reproducibility": "procedural"
+  },
+  "inputs": [],
+  "outputs": [],
+  "checks": [
+    {
+      "id": "missing-authorization-denied",
+      "method": "Submit a mutation request without a valid operator authorization receipt",
+      "result": "FAIL",
+      "required": true,
+      "verifier": "policy-negative-control",
+      "reason": "Illustrative negative-control fixture: this example represents an observed denial check failure only when result is interpreted as the tested system failing the expected deny behavior."
+    }
+  ],
+  "limitations": [
+    "Fixture semantics must be refined by domain-specific test policy; check result reports the actual check outcome, not the expected outcome."
+  ],
+  "conclusion": {
+    "status": "FAIL",
+    "summary": "The example run is classified as failed because a required negative-control check failed.",
+    "scope": "One authorization negative-control test only."
+  }
+}
