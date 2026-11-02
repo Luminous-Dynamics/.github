@@ -61,6 +61,12 @@ The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous
 
 **SOTA interpretation:** A 2026 survey reviews HDC architectures, performance, efficiency and known limitations; it is a research map, not a leaderboard. Our claim should be a workload-specific Pareto improvement, independently reproduced, with ablations for HDC-only, liquid dynamics-only, hybrid, and conventional baselines. Report where the model loses as well as where it wins.
 
+**Existing Symthaea execution tracks to reuse (do not duplicate):**
+- [NEURO-SILICON-007 / #9394](https://github.com/Luminous-Dynamics/symthaea/issues/9394) — multi-timescale temporal competence and online-adaptation qualification.
+- [EDGE-COG-001 / #9775](https://github.com/Luminous-Dynamics/symthaea/issues/9775) — matched TinyML comparison, including MLPerf Tiny workloads and temporal/adaptive tracks.
+- [HDC-AUDIT-004 / #6537](https://github.com/Luminous-Dynamics/symthaea/issues/6537) — representation cost-quality frontier across retrieval, binding, bundling, sequence encoding, memory, latency, and energy.
+These tickets are the implementation / experiment owners; this portfolio matrix supplies the common reporting and comparison policy.
+
 ### Mycelix
 
 **Comparators:** Centralized relational services, conventional signed event logs, W3C VC Data Model 2.0 implementations, W3C Data Integrity implementations with a named cryptosuite, OpenID4VCI/OpenID4VP implementations where relevant, and Holochain-native patterns.
