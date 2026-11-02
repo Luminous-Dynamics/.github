@@ -1,0 +1,68 @@
+{
+  "profile": "https://github.com/Luminous-Dynamics/.github/blob/main/standards/evidence/v0.1/README.md",
+  "claim": "A pinned reference build completed and matched its declared output digest.",
+  "subject": [
+    {
+      "name": "demo-binary",
+      "kind": "software",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "revision": "example-commit"
+    }
+  ],
+  "run": {
+    "runId": "example-run-001",
+    "startedAt": "2026-11-02T10:00:00Z",
+    "completedAt": "2026-11-02T10:01:00Z",
+    "executor": "example-builder",
+    "command": "example build --locked",
+    "softwareRevision": "example-commit",
+    "environment": {
+      "os": "linux",
+      "arch": "x86_64"
+    },
+    "seed": null,
+    "reproducibility": "bitwise"
+  },
+  "inputs": [
+    {
+      "name": "source-tree",
+      "kind": "software",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "demo-binary",
+      "kind": "software",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "id": "output-digest-match",
+      "method": "Recompute SHA-256 of produced artifact and compare with recorded digest",
+      "result": "PASS",
+      "required": true,
+      "verifier": "independent-hash-checker"
+    }
+  ],
+  "uncertainty": [],
+  "limitations": [
+    "Example fixture only; no real build or signature is asserted."
+  ],
+  "conclusion": {
+    "status": "PASS",
+    "summary": "The digest comparison passed for this example artifact only.",
+    "scope": "One produced artifact compared with one recorded digest.",
+    "policy": "All checks listed in this fixture are required and passed."
+  }
+}

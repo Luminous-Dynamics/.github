@@ -1,0 +1,458 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Luminous-Dynamics/.github/blob/main/standards/evidence/v0.1/evidence-result.schema.json",
+  "title": "Luminous Evidence Result Predicate 0.1",
+  "description": "Experimental in-toto predicate profile for scoped computational, simulation, infrastructure, and evaluation results. This schema validates structure only; it does not verify signatures, truth, or authorization. Semantic consistency (for example, time ordering and whether conclusion matches required checks) must be evaluated by a policy-aware verifier.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile",
+    "subject",
+    "run",
+    "inputs",
+    "outputs",
+    "checks",
+    "conclusion",
+    "limitations"
+  ],
+  "properties": {
+    "profile": {
+      "const": "https://github.com/Luminous-Dynamics/.github/blob/main/standards/evidence/v0.1/README.md"
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "subject": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "run": {
+      "$ref": "#/$defs/run"
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/check"
+      }
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/uncertainty"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      }
+    },
+    "conclusion": {
+      "$ref": "#/$defs/conclusion"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "digest"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "kind": {
+          "enum": [
+            "software",
+            "dataset",
+            "model",
+            "configuration",
+            "simulation",
+            "credential",
+            "decision",
+            "geospatial-feature-set",
+            "document",
+            "other"
+          ]
+        },
+        "uri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "mediaType": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "digest": {
+          "$ref": "#/$defs/digest"
+        },
+        "revision": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "classification": {
+          "enum": [
+            "public",
+            "internal",
+            "confidential",
+            "restricted"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2000
+        }
+      }
+    },
+    "digest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "enum": [
+            "sha256",
+            "sha384",
+            "sha512",
+            "blake3"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]+$",
+          "minLength": 32,
+          "maxLength": 128
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "sha256"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{64}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "sha384"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{96}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "sha512"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{128}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "blake3"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{64}$"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runId",
+        "startedAt",
+        "executor"
+      ],
+      "properties": {
+        "runId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "completedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "executor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "command": {
+          "type": "string",
+          "maxLength": 4000
+        },
+        "softwareRevision": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "string",
+            "null"
+          ]
+        },
+        "reproducibility": {
+          "enum": [
+            "bitwise",
+            "numerical",
+            "procedural",
+            "independent-replication",
+            "not-assessed"
+          ]
+        }
+      }
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "method",
+        "result",
+        "required"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "result": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "INCONCLUSIVE",
+            "NOT_RUN",
+            "SKIPPED"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "verifier": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "threshold": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "observed": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "required": {
+                "const": true
+              }
+            },
+            "required": [
+              "required"
+            ]
+          },
+          "then": {
+            "required": [
+              "verifier"
+            ]
+          }
+        }
+      ]
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "metric",
+        "method"
+      ],
+      "properties": {
+        "metric": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "estimate": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "sampleSize": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "confidenceLevel": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "lower": {
+          "type": "number"
+        },
+        "upper": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2000
+        }
+      }
+    },
+    "conclusion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "summary",
+        "scope"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "INCONCLUSIVE"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "policy": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      }
+    }
+  }
+}

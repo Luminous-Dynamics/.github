@@ -1,0 +1,56 @@
+{
+  "profile": "https://github.com/Luminous-Dynamics/.github/blob/main/standards/evidence/v0.1/README.md",
+  "claim": "The system was evaluated against a request without a valid authorization receipt.",
+  "subject": [
+    {
+      "name": "example-host-change",
+      "kind": "decision",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      }
+    }
+  ],
+  "run": {
+    "runId": "example-run-002",
+    "startedAt": "2026-11-02T10:00:00Z",
+    "completedAt": "2026-11-02T10:00:01Z",
+    "executor": "policy-test-harness",
+    "softwareRevision": "test-commit",
+    "environment": {
+      "scenario": "missing-authorization"
+    },
+    "reproducibility": "procedural"
+  },
+  "inputs": [],
+  "outputs": [],
+  "checks": [
+    {
+      "id": "missing-authorization-denied",
+      "method": "Submit a mutation request without a valid operator authorization receipt",
+      "result": "FAIL",
+      "required": true,
+      "verifier": "policy-negative-control",
+      "reason": "The request was accepted, although the negative-control policy required denial.",
+      "observed": "The unauthorized mutation request was accepted."
+    },
+    {
+      "id": "replay-control",
+      "method": "Replay a previously used authorization receipt and verify that the second use is rejected.",
+      "result": "NOT_RUN",
+      "required": true,
+      "verifier": "policy-negative-control",
+      "reason": "The replay-control case was not executed in this example run."
+    }
+  ],
+  "limitations": [
+    "Illustrative failure fixture only; no live system or real host mutation is asserted.",
+    "The fixture demonstrates that a required negative control can fail while another required check remains not run."
+  ],
+  "conclusion": {
+    "status": "FAIL",
+    "summary": "The example system accepted an unauthorized request, so a required denial check failed. A second required control was not run.",
+    "scope": "One authorization negative-control test only.",
+    "policy": "Any failed required check makes the overall result FAIL; a required check that is not run cannot be treated as passing."
+  }
+}
