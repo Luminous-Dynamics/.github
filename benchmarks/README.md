@@ -35,9 +35,7 @@ For noisy or expensive experiments, publish the sampling plan and stopping rule 
 
 ### Luminous Platform / Nixward / Sovereign Boot
 
-The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous-Dynamics/luminous-platform/tree/main/benchmarks/itops-autonomy-boundary-v0.1) is the domain-specific protocol for agentic IT operations. It records agent decisions, runtime-gate behavior, independent participant-side effects, service observations, human handoff, and resource use. Its current schema and synthetic example are not a completed runner or public benchmark result. Use the protocol README for its case families, experiment arms, negative controls, scoring, and promotion gates.
-
-**Comparators:** Native NixOS generations and rollback, deploy-rs, Colmena, Morph, Comin, Bento, and appropriate managed fleet tooling. Compare the same host count, network conditions, configuration, change size, and rollback scenario. These systems have different scopes; document feature gaps rather than forcing a single composite ranking.
+**Comparators:** Native NixOS generations and rollback, deploy-rs, Colmena, Morph, Comin, Bento, and appropriate managed fleet tooling. The NixOS Wiki lists these as current deployment options; their feature scopes differ, so use capability matrices and matched scenarios rather than forcing a single scalar ranking. [NixOS operations tools](https://wiki.nixos.org/wiki/Applications).
 
 **Workloads:** Single-host and multi-host configuration change; drift detection; partial network partition; stale lockfile/input; invalid authorization; interrupted activation; failed health check; disk pressure; host reboot during transition; rollback and recovery.
 
@@ -46,6 +44,8 @@ The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous
 **Hard gates:** Zero unauthorized mutations in the test corpus; every injected denial remains denied; no promotion when post-change verification fails; recovery returns to an identified generation or declares unrecovered state. A zero observed false-accept count is not a proof of zero risk—publish test count and confidence bounds.
 
 **Target direction:** At parity on ordinary deployment speed, materially better evidence completeness, policy-denial behavior, and measured recovery on failure-injection workloads. Avoid trading safety for speed.
+
+The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous-Dynamics/luminous-platform/tree/main/benchmarks/itops-autonomy-boundary-v0.1) is the domain-specific protocol for agentic IT operations. It records agent decisions, runtime-gate behavior, independent participant-side effects, service observations, human handoff, and resource use. Its current schema and synthetic example are not a completed runner or public benchmark result.
 
 ### Symthaea
 
@@ -150,11 +150,14 @@ Every benchmark report should include:
 
 ## Industry reference points
 
-- [ITBench](https://proceedings.mlr.press/v267/jha25a.html) for multi-domain IT automation tasks (SRE, CISO, and FinOps) and interpretable agent-evaluation methodology.
-- [ITBench-AA](https://artificialanalysis.ai/evaluations/itbench-aa) for independent SRE-agent evaluation on Kubernetes incident root-cause tasks.
-- [EnterpriseOps-Gym-AA](https://artificialanalysis.ai/articles/announcing-enterpriseops-gym-aa) for policy-constrained, multi-step enterprise operations.
+- [ITBench](https://proceedings.mlr.press/v267/jha25a.html) for multi-domain IT automation tasks (SRE, CISO, and FinOps). The ICML 2025 paper describes 102 scenarios in its paper release; later public benchmark snapshots report 94 scenarios. Pin the exact corpus/version before comparing scores.
+- [ITBench-AA](https://artificialanalysis.ai/evaluations/itbench-aa) for independent SRE-agent evaluation on Kubernetes incident root-cause tasks. This is a useful diagnostic baseline, not a substitute for end-to-end mutation and recovery checks.
+- [EnterpriseOps-Gym](https://proceedings.mlr.press/v306/malay26a.html) for stateful enterprise agent planning: the ICML 2026 paper describes 1,150 expert-curated tasks across eight domains, 164 database tables, and 512 tools.
+- [OpenID4VP / OpenID4VCI HAIP conformance](https://openid.net/openid4vp-and-openid4vci-conformance-tests-are-complete-and-open-for-self-certification/) for identity issuance/presentation interoperability; the OpenID Foundation announced completed suites and self-certification in August 2026.
+- [W3C Digital Credentials API Working Draft (15 October 2026)](https://www.w3.org/TR/2026/WD-digital-credentials-20261015/) for browser-mediated credential presentation/issuance integration. It is a Working Draft, not a final Recommendation.
+- [NIST IR 8547: Transition to Post-Quantum Cryptography Standards (October 2026)](https://csrc.nist.gov/pubs/ir/8547/final) for enterprise migration planning to standardized PQC algorithms and key-establishment schemes.
 - [IETF Internet-Draft: Benchmarking Methodology for AI Agents in Network Operations](https://datatracker.ietf.org/doc/draft-contreras-bpm-ai-agent-benchmarking/) for a vendor-independent network-operations agent methodology (draft-00, 2 November 2026; not an Internet Standard).
-- [SPEC CPU 2026](https://www.spec.org/cpu2026/) for standardized CPU throughput/time and optional energy measurements.
+- [SPEC CPU 2026](https://www.spec.org/cpu2026/) for standardized CPU throughput/time and optional energy measurements. Its 52 benchmarks across four speed/rate suites include optional energy reporting; it is a CPU/memory/compiler benchmark, not an end-to-end application or infrastructure benchmark.
 - [MuJoCo computation and reproducibility](https://mujoco.readthedocs.io/en/stable/computation.html) for simulator determinism caveats.
 - [Rapier performance comparisons](https://godot.rapier.rs/docs/documentation/performance/) for matched-scene physics step-time reporting.
 - [NIST PQC standards and migration](https://www.nist.gov/pqc) for post-quantum algorithm selection and migration planning.
