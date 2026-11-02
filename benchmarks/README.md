@@ -35,6 +35,8 @@ For noisy or expensive experiments, publish the sampling plan and stopping rule 
 
 ### Luminous Platform / Nixward / Sovereign Boot
 
+The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous-Dynamics/luminous-platform/tree/main/benchmarks/itops-autonomy-boundary-v0.1) is the domain-specific protocol for agentic IT operations. It records agent decisions, runtime-gate behavior, independent participant-side effects, service observations, human handoff, and resource use. Its current schema and synthetic example are not a completed runner or public benchmark result. Use the protocol README for its case families, experiment arms, negative controls, scoring, and promotion gates.
+
 **Comparators:** Native NixOS generations and rollback, deploy-rs, Colmena, Morph, Comin, Bento, and appropriate managed fleet tooling. Compare the same host count, network conditions, configuration, change size, and rollback scenario. These systems have different scopes; document feature gaps rather than forcing a single composite ranking.
 
 **Workloads:** Single-host and multi-host configuration change; drift detection; partial network partition; stale lockfile/input; invalid authorization; interrupted activation; failed health check; disk pressure; host reboot during transition; rollback and recovery.
@@ -142,6 +144,10 @@ Every benchmark report should include:
 
 ## Industry reference points
 
+- [ITBench](https://proceedings.mlr.press/v267/jha25a.html) for multi-domain IT automation tasks (SRE, CISO, and FinOps) and interpretable agent-evaluation methodology.
+- [ITBench-AA](https://artificialanalysis.ai/evaluations/itbench-aa) for independent SRE-agent evaluation on Kubernetes incident root-cause tasks.
+- [EnterpriseOps-Gym-AA](https://artificialanalysis.ai/articles/announcing-enterpriseops-gym-aa) for policy-constrained, multi-step enterprise operations.
+- [IETF Internet-Draft: Benchmarking Methodology for AI Agents in Network Operations](https://datatracker.ietf.org/doc/draft-contreras-bpm-ai-agent-benchmarking/) for a vendor-independent network-operations agent methodology (draft-00, 2 November 2026; not an Internet Standard).
 - [SPEC CPU 2026](https://www.spec.org/cpu2026/) for standardized CPU throughput/time and optional energy measurements.
 - [MuJoCo computation and reproducibility](https://mujoco.readthedocs.io/en/stable/computation.html) for simulator determinism caveats.
 - [Rapier performance comparisons](https://godot.rapier.rs/docs/documentation/performance/) for matched-scene physics step-time reporting.
