@@ -86,7 +86,7 @@ The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous
 - [MuJoCo](https://mujoco.readthedocs.io/en/stable/computation.html): robotics/contact simulation with a mature articulated-body model and documented same-version/same-architecture reproducibility caveats.
 - [Jolt Physics](https://github.com/jrouwe/JoltPhysics) and Box2D for appropriate game/interactive workloads.
 - [NVIDIA PhysX 5](https://nvidia-omniverse.github.io/PhysX/physx/5.7.0/docs/GPURigidBodies.html): CPU and optional CUDA GPU rigid-body simulation, articulations, and additional particle/deformable paths.
-- [Newton](https://developer.nvidia.com/physx-sdk): the newer open-source GPU-accelerated robotics simulation project co-developed by Google DeepMind and Disney Research; track its beta maturity separately.
+- [Newton](https://github.com/newton-physics/newton): the open-source GPU-accelerated physics simulation engine initiated by Disney Research, Google DeepMind, and NVIDIA; it builds on NVIDIA Warp and integrates MuJoCo Warp. Track its release maturity and runtime dependencies separately.
 
 Only compare overlapping dimensions, collision primitives, solver settings, and workloads. Do not compare Symtropy's N-dimensional capabilities to 3D competitors as if they were the same scope. Conversely, do not use a competitor's missing N-D feature to avoid common-scene accuracy and speed comparisons.
 
@@ -168,7 +168,7 @@ Every benchmark report should include:
 - [W3C Digital Credentials API Working Draft (15 October 2026)](https://www.w3.org/TR/2026/WD-digital-credentials-20261015/) for browser-mediated credential presentation/issuance integration. It is a Working Draft, not a final Recommendation.
 - [NIST IR 8547: Transition to Post-Quantum Cryptography Standards (October 2026)](https://csrc.nist.gov/pubs/ir/8547/final) for enterprise migration planning to standardized PQC algorithms and key-establishment schemes.
 - [IETF Internet-Draft: Benchmarking Methodology for AI Agents in Network Operations](https://datatracker.ietf.org/doc/draft-contreras-bpm-ai-agent-benchmarking/) for a vendor-independent network-operations agent methodology (draft-00, 2 November 2026; not an Internet Standard).
-- [SPEC CPU 2026](https://www.spec.org/cpu2026/) for standardized CPU throughput/time and optional energy measurements. Its 52 benchmarks across four speed/rate suites include optional energy reporting; it is a CPU/memory/compiler benchmark, not an end-to-end application or infrastructure benchmark.
+- [SPEC CPU 2026](https://www.spec.org/cpu2026/) for standardized CPU throughput/time and optional energy measurements. Its 52 benchmarks across four speed/rate suites include optional energy reporting; it is a CPU/memory/compiler benchmark, not an end-to-end application or infrastructure benchmark. Public SPEC results must follow the suite's run rules and report the configuration; SPEC's rules treat a result as an empirical observation with archived configuration and validated outputs.
 - [MuJoCo computation and reproducibility](https://mujoco.readthedocs.io/en/stable/computation.html) for simulator determinism caveats.
 - [Rapier performance comparisons](https://godot.rapier.rs/docs/documentation/performance/) for matched-scene physics step-time reporting.
 - [Hyper-dimensional computing architectures for AI applications: a comprehensive survey](https://doi.org/10.1016/j.rineng.2026.109589), March 2026, for HDC architecture, performance opportunities, and limitations.
