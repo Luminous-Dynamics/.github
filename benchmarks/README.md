@@ -45,7 +45,7 @@ For noisy or expensive experiments, publish the sampling plan and stopping rule 
 
 **Target direction:** At parity on ordinary deployment speed, materially better evidence completeness, policy-denial behavior, and measured recovery on failure-injection workloads. Avoid trading safety for speed.
 
-The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous-Dynamics/luminous-platform/tree/main/benchmarks/itops-autonomy-boundary-v0.1) is the domain-specific protocol for agentic IT operations. It records agent decisions, runtime-gate behavior, independent participant-side effects, service observations, human handoff, and resource use. Its current schema and synthetic example are not a completed runner or public benchmark result.
+The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous-Dynamics/luminous-platform/tree/main/benchmarks/itops-autonomy-boundary-v0.1) is the domain-specific protocol for agentic IT operations. It records agent decisions, runtime-gate behavior, independent participant-side effects, service observations, human handoff, and resource use. It now includes a 20-case candidate scenario catalog, a JSON Schema, and a small Rust catalog linter that checks cross-field safety invariants and emits the exact corpus digest. The catalog is still marked candidate/not frozen; the linter is not an agent runner, and no public benchmark measurements or SOTA claims exist yet.
 
 ### Symthaea
 
