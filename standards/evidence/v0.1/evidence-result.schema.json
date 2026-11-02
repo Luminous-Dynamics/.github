@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Luminous-Dynamics/.github/blob/main/standards/evidence/v0.1/evidence-result.schema.json",
   "title": "Luminous Evidence Result Predicate 0.1",
-  "description": "Experimental in-toto predicate profile for scoped computational, simulation, infrastructure, and evaluation results. This schema validates structure only; it does not verify signatures, truth, or authorization.",
+  "description": "Experimental in-toto predicate profile for scoped computational, simulation, infrastructure, and evaluation results. This schema validates structure only; it does not verify signatures, truth, or authorization. Semantic consistency (for example, time ordering and whether conclusion matches required checks) must be evaluated by a policy-aware verifier.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -157,7 +157,85 @@
           "minLength": 32,
           "maxLength": 128
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "sha256"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{64}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "sha384"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{96}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "sha512"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{128}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "algorithm": {
+                "const": "blake3"
+              }
+            },
+            "required": [
+              "algorithm"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^[A-Fa-f0-9]{64}$"
+              }
+            }
+          }
+        }
+      ]
     },
     "run": {
       "type": "object",
@@ -277,7 +355,26 @@
           "type": "string",
           "maxLength": 1000
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "required": {
+                "const": true
+              }
+            },
+            "required": [
+              "required"
+            ]
+          },
+          "then": {
+            "required": [
+              "verifier"
+            ]
+          }
+        }
+      ]
     },
     "uncertainty": {
       "type": "object",
