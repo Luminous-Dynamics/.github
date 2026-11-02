@@ -49,15 +49,17 @@ The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous
 
 ### Symthaea
 
-**Comparators:** Task-appropriate conventional ML models, strong small language models, HDC baselines, standard continual-learning algorithms, and task-specific hand-engineered baselines. Include a strong model when semantics require it; do not compare unlike tasks.
+**Comparators:** Task-appropriate conventional ML models, strong small language models, HDC baselines, standard continual-learning algorithms, and task-specific hand-engineered baselines. Include a strong model when semantics require it; do not compare unlike tasks. HDC is an active research area, not a demonstrated universal replacement for deep learning; the 2026 survey literature discusses both efficiency opportunities and architecture limitations.
 
-**Workloads:** HDC associative recall; compositional binding/unbinding; temporal sequence prediction; continual learning with task/domain shifts; calibration under OOD inputs; constrained-device inference; adversarial and corrupted memory queries.
+**Workloads:** HDC associative recall; compositional binding/unbinding; temporal sequence prediction; continual learning with task/domain shifts; calibration under OOD inputs; constrained-device inference; adversarial and corrupted memory queries. Add realistic online/continual task sequences where later tasks depend on earlier experience; include [Continual Learning Bench 1.0](https://sky.cs.berkeley.edu/project/continual-learning-bench/) as a candidate external task source, subject to its license and harness compatibility.
 
 **Metrics:** Task quality, energy per accepted task, p50/p95 latency, peak RAM/VRAM, model size, update cost, forgetting (e.g. average accuracy drop on prior tasks), calibration error, OOD risk-coverage, and recovery from corrupted memory.
 
 **Hard gates:** Dataset and split digests pinned; leakage audit; baseline tuning budget disclosed; no consciousness or AGI conclusion inferred from task metrics; claims about privacy proofs include proof verification and leakage assumptions.
 
 **Target direction:** Find workload regimes where HDC + liquid dynamics has a measured cost-quality advantage at matched accuracy or a quality advantage at matched energy/latency. If it does not, narrow the claim to the workloads where it does.
+
+**SOTA interpretation:** A 2026 survey reviews HDC architectures, performance, efficiency and known limitations; it is a research map, not a leaderboard. Our claim should be a workload-specific Pareto improvement, independently reproduced, with ablations for HDC-only, liquid dynamics-only, hybrid, and conventional baselines. Report where the model loses as well as where it wins.
 
 ### Mycelix
 
@@ -79,15 +81,24 @@ The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous
  
 ### Symtropy
 
-**Comparators:** Analytic reference solutions first; then Rapier, MuJoCo, Jolt, Box2D, and PhysX where dimensions, collision primitives, solver settings, and workloads overlap. Do not compare N-dimensional capabilities to 3D competitors as if they were the same scope.
+**Comparators:** Analytic reference solutions first. Then use scope-matched comparisons against:
+- [Rapier](https://rapier.rs/docs/): Rust-native 2D/3D engine with collision, joints, soft bodies, snapshots, and optional cross-platform determinism.
+- [MuJoCo](https://mujoco.readthedocs.io/en/stable/computation.html): robotics/contact simulation with a mature articulated-body model and documented same-version/same-architecture reproducibility caveats.
+- [Jolt Physics](https://github.com/jrouwe/JoltPhysics) and Box2D for appropriate game/interactive workloads.
+- [NVIDIA PhysX 5](https://nvidia-omniverse.github.io/PhysX/physx/5.7.0/docs/GPURigidBodies.html): CPU and optional CUDA GPU rigid-body simulation, articulations, and additional particle/deformable paths.
+- [Newton](https://developer.nvidia.com/physx-sdk): the newer open-source GPU-accelerated robotics simulation project co-developed by Google DeepMind and Disney Research; track its beta maturity separately.
 
-**Workloads:** Free motion; collision stacks; joint chains/grids; high-speed CCD; frictional contacts; resting contact stability; deterministic replay; variable mass ratios; 2D/3D shared scenes; dimension-specific tests where competitors cannot participate.
+Only compare overlapping dimensions, collision primitives, solver settings, and workloads. Do not compare Symtropy's N-dimensional capabilities to 3D competitors as if they were the same scope. Conversely, do not use a competitor's missing N-D feature to avoid common-scene accuracy and speed comparisons.
+
+**Workloads:** Free motion; collision stacks; joint chains/grids; high-speed CCD; frictional contacts; resting contact stability; deterministic replay; variable mass ratios; 2D/3D shared scenes; dimension-specific tests where competitors cannot participate. Add common robot manipulation tasks where MuJoCo / PhysX / Newton are meaningful comparators, and report solver/model differences explicitly.
 
 **Metrics:** Relative position/velocity error, momentum and energy drift where conserved, constraint residual, penetration depth, contact stability, deterministic replay agreement, p50/p95 step time, throughput, allocations, and energy per simulated second.
 
 **Hard gates:** Physics correctness and stability thresholds are specified before timing. Performance claims require matched settings, machine, and workload. Numerical divergence across versions is reported with tolerances; contact systems can amplify tiny differences.
 
 **Target direction:** Match established engines on common scenes while offering measured advantages in generic N-dimensional and application-defined state-coupling workloads. Never claim global superiority from a narrow microbenchmark.
+
+**Competitive thesis:** The likely differentiation is not "faster than MuJoCo/PhysX at all 3D physics." It is a reusable N-dimensional substrate and generic state-coupling interfaces that conventional 3D engines do not primarily target. The benchmark must separately establish (a) 2D/3D correctness and performance parity, (b) N-D correctness against analytical references, and (c) useful state-coupled behavior with a held-out application task. If these cannot be shown, narrow the product thesis.
 
 ### Sol Atlas
 
@@ -111,7 +122,7 @@ The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous
 
 **Hard gates:** No production positioning before independent cryptographic and application security review. A working handshake does not establish secure end-to-end product behavior.
 
-**Standards direction:** Follow NIST FIPS 203/204/205 as applicable; make algorithm agility explicit; record exact parameter sets and wire versions. PQC claims require interoperability tests and review.
+**Standards direction:** Follow NIST FIPS 203/204/205 as applicable; make algorithm agility explicit; record exact parameter sets and wire versions. PQC claims require interoperability tests and review. Include a migration plan informed by [NIST IR 8547 (October 2026)](https://csrc.nist.gov/pubs/ir/8547/final): inventory quantum-vulnerable primitives, define hybrid migration profiles, and test downgrade / algorithm-confusion paths. A post-quantum algorithm in a handshake does not make the entire remote-session product quantum-safe.
 
 ### Spark Engine
 
@@ -160,6 +171,8 @@ Every benchmark report should include:
 - [SPEC CPU 2026](https://www.spec.org/cpu2026/) for standardized CPU throughput/time and optional energy measurements. Its 52 benchmarks across four speed/rate suites include optional energy reporting; it is a CPU/memory/compiler benchmark, not an end-to-end application or infrastructure benchmark.
 - [MuJoCo computation and reproducibility](https://mujoco.readthedocs.io/en/stable/computation.html) for simulator determinism caveats.
 - [Rapier performance comparisons](https://godot.rapier.rs/docs/documentation/performance/) for matched-scene physics step-time reporting.
+- [Hyper-dimensional computing architectures for AI applications: a comprehensive survey](https://doi.org/10.1016/j.rineng.2026.109589), March 2026, for HDC architecture, performance opportunities, and limitations.
+- [Continual Learning Bench 1.0](https://sky.cs.berkeley.edu/project/continual-learning-bench/), May 2026, for dependent, online task sequences where systems are expected to adapt during evaluation.
 - [NIST PQC standards and migration](https://www.nist.gov/pqc) for post-quantum algorithm selection and migration planning.
 - [OpenID4VP / OpenID4VCI conformance](https://openid.net/openid4vp-and-openid4vci-conformance-tests-are-complete-and-open-for-self-certification/) for verifiable credential interoperability.
 - [W3C VC Data Model 2.0](https://www.w3.org/TR/vc-data-model-2.0/) for credential semantics.
