@@ -61,16 +61,22 @@ The focused [ITOPS Autonomy Boundary Benchmark v0.1](https://github.com/Luminous
 
 ### Mycelix
 
-**Comparators:** Centralized relational services, conventional signed event logs, W3C VC 2.0 implementations, OpenID4VCI/OpenID4VP implementations where relevant, and Holochain-native patterns.
+**Comparators:** Centralized relational services, conventional signed event logs, W3C VC Data Model 2.0 implementations, W3C Data Integrity implementations with a named cryptosuite, OpenID4VCI/OpenID4VP implementations where relevant, and Holochain-native patterns.
 
-**Workloads:** Credential issue/hold/present/revoke; concurrent writes; peer restart/rejoin; DHT validation; conflicting claims; colluding peers; stale or replayed data; permission changes; data export and recovery.
+**Workloads:** Credential issue/hold/present/revoke; concurrent writes; peer restart/rejoin; DHT validation; conflicting claims; colluding peers; stale or replayed data; permission changes; data export and recovery. Add explicit credential mutation cases for each signed field, wrong issuer key, wrong verification method, unsupported algorithm, hybrid signature with one invalid component, pure-PQC signatures that only pass structural parsing, unavailable/stale revocation source, and status-list index/resource substitution.
 
-**Metrics:** p50/p95 operation latency, write throughput, storage/replication cost, revocation propagation time, false accept/reject rates, privacy leakage surface, recovery success, and interoperability-conformance cases.
+**Metrics:** p50/p95 operation latency, write throughput, storage/replication cost, revocation propagation time, false accept/reject rates, privacy leakage surface, recovery success, credential-size overhead, verifier implementation interoperability, and conformance-suite coverage.
 
-**Hard gates:** Invalid signatures, revoked credentials, malformed entries, and unauthorized reads are rejected. Multi-agent tests are required for claims about DHT validation. Unit-test counts alone do not establish distributed correctness.
+**Hard gates:**
+- Invalid signatures, revoked credentials, malformed entries, expired credentials, unauthorized reads, and unsupported algorithms are rejected or explicitly returned as unsupported/inconclusive.
+- Every security-relevant field consumed by a verifier is cryptographically bound under the declared proof profile; one-field-at-a-time mutation tests must fail.
+- A hybrid credential is not valid unless all required signature components are cryptographically verified. A pure-PQC signature must not be treated as verified merely because its tagged encoding or length is correct.
+- Revocation/status unknown, unavailable, malformed, or stale beyond policy limits cannot be treated as active.
+- Multi-agent tests are required for claims about DHT validation. Unit-test counts alone do not establish distributed correctness.
+- External interoperability claims require an independent resolver/verifier and the relevant W3C / OpenID conformance tests. VC-shaped JSON and a self-issued cryptosuite label are not conformance evidence.
 
-**Standards direction:** Map credential functions to W3C VC Data Model 2.0 and evaluate W3C/OpenID conformance rather than inventing a competing credential format. Track VC Data Model 2.1 as a Working Draft separately; do not call a draft Recommendation.
-
+**Standards direction:** Map credential semantics to W3C VC Data Model 2.0 and select a published W3C Data Integrity cryptosuite or another interoperable proof format. Specify and independently test the `did:mycelix` method and resolver. Use W3C Bitstring Status List only when the status-list resource and verification path are actually implemented; otherwise describe Mycelix's Holochain status registry as a native mechanism. Implement OpenID4VCI issuance and OpenID4VP presentation adapters after the underlying credential, DID, and key-lifecycle semantics are stable. Run the OpenID Foundation conformance suites for the exact role and profile. See the [Mycelix Identity Interoperability and Assurance Roadmap](https://github.com/Luminous-Dynamics/mycelix/blob/main/docs/identity/INTEROPERABILITY_AND_ASSURANCE.md).
+ 
 ### Symtropy
 
 **Comparators:** Analytic reference solutions first; then Rapier, MuJoCo, Jolt, Box2D, and PhysX where dimensions, collision primitives, solver settings, and workloads overlap. Do not compare N-dimensional capabilities to 3D competitors as if they were the same scope.
