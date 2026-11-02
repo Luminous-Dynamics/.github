@@ -109,6 +109,12 @@ Where possible, project documentation should provide exact reproduction commands
 
 These are drafts and evaluation plans, not certifications or claims that all projects already emit compliant evidence packages.
 
+### Commercialization and partnerships
+
+- [Portfolio Commercialization and Investor Blueprint](https://github.com/Luminous-Dynamics/.github/blob/main/strategy/PORTFOLIO_COMMERCIALIZATION.md) — current product hypotheses, buyer segments, alternative comparisons, validation gates, capital-fit principles, and investor diligence requirements.
+
+The commercialization document is a working hypothesis, not a claim of product-market fit, customers, revenue, or a completed financing round.
+
 ## Collaboration
 
 We welcome technically grounded contributions, independent benchmark reproduction, research collaboration, design partners, and deployment feedback.
