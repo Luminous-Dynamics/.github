@@ -1,66 +1,120 @@
 # Luminous Dynamics
 
-**Verifiable cognitive systems, decentralized coordination, and humane infrastructure.**
+**Sovereign computing, verifiable intelligence, simulation, and human-centered coordination.**
 
-Luminous Dynamics builds open-source research systems at the intersection of cognitive architecture, hyperdimensional computing, privacy-preserving verification, decentralized governance, simulation, and reproducible infrastructure.
+Luminous Dynamics develops open-source software and research systems for operating computing infrastructure, building adaptive computational systems, modeling physical environments, and coordinating people and institutions.
 
-Our work is consciousness-informed, but claim-disciplined: we treat consciousness, alignment, and collective intelligence as open research questions to explore through code, tests, benchmarks, public documentation, and independent review.
+Our work spans systems engineering, cognitive architecture, privacy-preserving verification, simulation, decentralized coordination, and geospatial applications. We are research-led and claim-disciplined: project pages distinguish implemented capabilities from prototypes, experiments, planned work, and open research questions.
 
-## Core Projects
+Our guiding principles are **truth, dignity, flourishing, and sovereignty**.
 
-### [Symthaea](https://github.com/Luminous-Dynamics/symthaea) — Cognitive Architecture
+## Portfolio
 
-Experimental cognitive architecture for verifiable, privacy-preserving, consciousness-relevant AI research.
+The portfolio is organized around complementary platforms. They are independently useful projects; integrations are developed selectively and should not be assumed to exist merely because projects appear in the same portfolio.
 
-Symthaea combines hyperdimensional computing, closed-form continuous-time dynamics, active inference, Resonant Hypergraph Networks, and zero-knowledge verification to study whether selected cognitive state transitions, safety invariants, and representation updates can be measured or proven without exposing private internal state.
+### Sovereign computing and operations
 
-**Focus:** HDC, CfC/LTC dynamics, RHN memory, cognitive-loop integrity, ZK verification, browser/WASM kernels.
+#### [Luminous Platform](https://github.com/Luminous-Dynamics/luminous-platform) — NixOS infrastructure operations
 
-**Not claimed:** AGI, proven consciousness, medical compliance, or legal compliance by default.
+A composable NixOS platform focused on observable system state, explicit authorization, controlled changes, verification, and recovery.
 
-### [Mycelix](https://github.com/Luminous-Dynamics/mycelix) — Decentralized Coordination
+- [Nixward](https://github.com/Luminous-Dynamics/nixward) — NixOS management, machine contracts, system observation, and an evidence-bound change lifecycle.
+- [Sovereign Boot](https://github.com/Luminous-Dynamics/sovereign-boot) — boot lifecycle and recovery components. Disabled by default; host enablement remains subject to the repository's qualification gates.
+- [Luminous Edge](https://github.com/Luminous-Dynamics/luminous-edge) — flake composition for supported platform modules.
+- [Nix Signature Policy](https://github.com/Luminous-Dynamics/nix-signature-policy) — a separate reference implementation for composable, downgrade-resistant Nix signature authorization policy.
 
-Agent-centric civic and commons infrastructure for privacy-preserving credentials, governance, health-adjacent coordination, education, mutual aid, and local-first resilience.
+**Status:** Active engineering. Component maturity, compatibility, and safety gates are documented in their respective repositories. Do not interpret the platform overview as a production-readiness or security-audit claim.
 
-**Focus:** Holochain hApps, commons governance, decentralized identity, consent, credentials, post-quantum cryptographic experiments, and rights-aware coordination.
+#### [Xenia](https://github.com/Luminous-Dynamics/xenia-peer) — consent-first remote sessions
 
-### [Symtropy](https://github.com/Luminous-Dynamics/symtropy) — Math, Physics, and Simulation Substrate
+Peer-to-peer remote-session software with an application layer ([xenia-peer](https://github.com/Luminous-Dynamics/xenia-peer)) and a separate sealed wire protocol ([xenia-wire](https://github.com/Luminous-Dynamics/xenia-wire)).
 
-Reusable N-dimensional math, geometry, physics, and simulation substrate for research systems.
+**Status:** Pre-alpha. End-to-end exercised capabilities are documented, but the project explicitly does not claim a completed security review or production readiness.
 
-Symtropy is the lower-level simulation and dynamics layer. It is separate from Symthaea’s cognitive architecture and Mycelix’s civic/governance layer.
+### Cognitive systems
 
-### [Nix Signature Policy](https://github.com/Luminous-Dynamics/nix-signature-policy) — Reproducible Infrastructure
+#### [Symthaea](https://github.com/Luminous-Dynamics/symthaea) — experimental cognitive architecture
 
-Reference implementation and conformance suite for composable, downgrade-resistant signature policy for Nix. [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix)
+Research into hyperdimensional computing, continuous-time dynamics, active inference, memory, verifiable computation, and privacy-preserving proofs.
 
-### [Xenia](https://github.com/Luminous-Dynamics/xenia-peer) — Consent-First Remote Sessions
+Symthaea investigates measurable computational properties and selected verifiable state transitions. It does **not** claim to prove machine consciousness, establish AGI, or confer regulatory compliance.
 
-Peer-to-peer remote-session infrastructure: [`xenia-wire`](https://github.com/Luminous-Dynamics/xenia-wire) (PQC-sealed wire protocol) + [`xenia-peer`](https://github.com/Luminous-Dynamics/xenia-peer) (daemon/viewer application layer). Pre-alpha — consent ceremonies, cryptographic session integrity, and local-first control are the design center, not yet a finished security story. See each repo's README for exact status.
+Start with its [evidence table](https://github.com/Luminous-Dynamics/symthaea#evidence-table), [honest status](https://github.com/Luminous-Dynamics/symthaea/blob/main/docs/HONEST_STATUS.md), and reproduction instructions.
 
-## Research Themes
+### Simulation and physical systems
 
-* Verifiable cognitive computation
-* Hyperdimensional computing
-* Zero-knowledge and post-quantum verification
-* Decentralized commons infrastructure
-* Consciousness-relevant AI instrumentation
-* Simulation and embodied intelligence
-* Reproducible systems engineering
+#### [Symtropy](https://github.com/Luminous-Dynamics/symtropy) — N-dimensional mathematics and physics
 
-## What We Do Not Claim
+A Rust simulation substrate for N-dimensional geometry, rigid-body dynamics, collision handling, state coupling, and research experiments. Its permissively licensed core crates and AGPL-licensed research/application crates have different licensing terms; consult the repository before incorporating components.
 
-Luminous Dynamics does not claim that its systems prove artificial consciousness, constitute AGI, replace external safety evaluation, or provide medical/legal compliance by default.
+Performance figures in the README are project-reported measurements and should be compared using equivalent workloads and independently reproducible methods.
 
-We build experimental infrastructure for studying these questions honestly.
+### Decentralized coordination
+
+#### [Mycelix](https://github.com/Luminous-Dynamics/mycelix) — civic, commons, and institutional coordination
+
+A Holochain-based research and application ecosystem for identity, credentials, consent, governance, education, commons, mutual aid, and other coordination domains.
+
+The repository's maturity matrix distinguishes live application surfaces from pre-alpha backend work and incomplete multi-agent testing. [Pulse](https://mail.mycelix.net) and [Praxis](https://praxis.mycelix.net) have live application surfaces; consult the Mycelix README for their current source, deployment, and integration caveats. A passing unit test or a defined data schema is not evidence of production readiness.
+
+Related work includes [Mycelix Health](https://github.com/Luminous-Dynamics/mycelix-health), which remains research-stage and is not represented as a clinically deployed or compliant health-record system.
+
+### Spatial and planetary applications
+
+#### [Sol Atlas](https://github.com/Luminous-Dynamics/sol-atlas-leptos) — planetary energy and infrastructure visualization
+
+A Rust, Leptos, WebAssembly, and WebGL2 application for interactive planetary visualization, energy and infrastructure layers, and scenario exploration.
+
+- [Open the demo](https://atlas.luminousdynamics.io)
+- [Project demonstration notes](https://github.com/Luminous-Dynamics/sol-atlas-leptos/blob/main/DEMO.md)
+
+The current application uses bundled static data by default. Optional data integrations are feature-gated. Scenario timelines, planned infrastructure, and simulated layers must not be interpreted as live measurements or operational forecasts without source, timestamp, and validation evidence.
+
+## Research laboratories and enabling components
+
+- [Spark Engine](https://github.com/Luminous-Dynamics/spark-engine) — a physics-honest toolkit for investigating reported lattice-confinement-fusion anomalies and designing discriminating experiments. It is a research tool, **not a fusion power source**.
+- [Kitsune2 DTN transport](https://github.com/Luminous-Dynamics/kitsune2-transport-dtn) — a proof-of-concept BPv7 delay-tolerant transport for Kitsune2. Its README documents demonstrated delivery conditions and remaining untested cases.
+- [scap downstream fixes](https://github.com/Luminous-Dynamics/scap) — a deliberately maintained downstream fork for Xenia; upstream attribution and the upstream contribution are documented in that repository.
+
+Other repositories contain supporting libraries, prototypes, historical work, and experiments. Check each repository's archive flag, README, license, and current maturity notes before treating it as an active product.
+
+## How the platforms relate
+
+The portfolio has a shared direction, not a claim of one finished integrated system:
+
+- **Luminous Platform** manages and protects computing environments.
+- **Symthaea** investigates adaptive cognition and verifiable computation.
+- **Symtropy** provides mathematical and physical simulation capabilities.
+- **Mycelix** supports identity, provenance, consent, and distributed coordination.
+- **Sol Atlas** provides spatial visualization and scenario context.
+- **Xenia** explores consent-bound remote sessions.
+
+A proposed common evidence layer can connect inputs, versions, execution records, verification results, authorization, and outcomes. Each integration must be implemented and tested before it is described as available.
+
+## Evidence and maturity standards
+
+We aim to make the state of each project inspectable.
+
+- **Active engineering** means development is ongoing; it does not mean production-ready.
+- **Pre-alpha / prototype** means important product, compatibility, security, or deployment work remains.
+- **Research** means hypotheses and experimental results require appropriate validation.
+- **Archived** means the repository is historical and should not be presented as a current product.
+
+Where possible, project documentation should provide exact reproduction commands, pinned versions, benchmark methodology, baselines, negative controls, known limitations, and independent-review status. Security, medical, legal, and regulatory claims require the relevant external evaluation; they are not inferred from tests or architectural intent.
+
+## Collaboration
+
+We welcome technically grounded contributions, independent benchmark reproduction, research collaboration, design partners, and deployment feedback.
+
+Start with the README and issue tracker of the specific project. For commercial use, check the applicable repository and crate licenses; licensing terms can differ across components.
 
 ## Structural Love
 
 Luminous Dynamics is guided by **Structural Love**:
 
-> **Love is the disciplined, joyful co-creation of becoming, bounded by truth, consent, repair, and irreducible dignity.**
+> Love is the disciplined, joyful co-creation of becoming, bounded by truth, consent, repair, and irreducible dignity.
 
-The ten principles of Structural Love are:
+Its ten principles are:
 
 1. **Love is rigorous, playful, co-creative becoming.**
 2. **Love is attention without possession.**
@@ -73,40 +127,4 @@ The ten principles of Structural Love are:
 9. **Love is joy with accountability.**
 10. **Love is irreducible dignity.**
 
-These principles guide how we design cognitive systems, civic infrastructure, governance tools, research practices, and open-source communities.
-
-## Start Here
-
-*(This table used to point at `luminous-nix` and `terra-atlas` as if they were live — both are archived. If you land on this org page from a search result or pinned-repo list showing either of those, you're looking at historical work; the table below is the current map.)*
-
-### Active flagships
-
-| Repository | Purpose |
-| --- | --- |
-| [`symthaea`](https://github.com/Luminous-Dynamics/symthaea) | Cognitive architecture and verifiable consciousness-relevant AI research |
-| [`mycelix`](https://github.com/Luminous-Dynamics/mycelix) | Decentralized civic and commons coordination |
-| [`symtropy`](https://github.com/Luminous-Dynamics/symtropy) | Math, physics, geometry, and simulation substrate |
-| [`xenia-peer`](https://github.com/Luminous-Dynamics/xenia-peer) / [`xenia-wire`](https://github.com/Luminous-Dynamics/xenia-wire) | Consent-first peer-to-peer remote sessions (pre-alpha) |
-| [`nix-signature-policy`](https://github.com/Luminous-Dynamics/nix-signature-policy) | Composable, downgrade-resistant Nix signature policy |
-
-### Experimental laboratories
-
-| Repository | Purpose |
-| --- | --- |
-| [`spark-engine`](https://github.com/Luminous-Dynamics/spark-engine) | Physics-honest toolkit for Lattice Confinement Fusion anomaly investigation |
-| [`symtropy-consciousness-physics`](https://github.com/Luminous-Dynamics/symtropy-consciousness-physics) | Multi-agent by-product mutualism research |
-| [`scap`](https://github.com/Luminous-Dynamics/scap) | Cross-platform screen-capture library (used by Xenia) |
-| [`kitsune2-transport-dtn`](https://github.com/Luminous-Dynamics/kitsune2-transport-dtn) | Kitsune2 transport backed by BPv7/DTN store-and-forward |
-
-### Historical / archived
-
-| Repository | Successor / current status |
-| --- | --- |
-| [`luminous-nix`](https://github.com/Luminous-Dynamics/luminous-nix) | Archived. Natural-language-to-NixOS translation research; see `nix-signature-policy` for the active Nix-adjacent work |
-| [`terra-atlas`](https://github.com/Luminous-Dynamics/terra-atlas) | Archived. Superseded by `terra-atlas-leptos` |
-
-Everything else in this org not listed above is either a supporting library for one of the active flagships, or older/exploratory work not currently maintained as a standalone product — check a given repo's own README and archive status before treating it as current.
-
-## Development Values
-
-We prefer systems that are local-first where possible, privacy-preserving by design, reproducible, transparent about limitations, resilient under failure, and aligned with human and more-than-human flourishing.
+These principles inform how we design systems, conduct research, govern shared infrastructure, and work with the people affected by our technology.
