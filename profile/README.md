@@ -102,6 +102,13 @@ We aim to make the state of each project inspectable.
 
 Where possible, project documentation should provide exact reproduction commands, pinned versions, benchmark methodology, baselines, negative controls, known limitations, and independent-review status. Security, medical, legal, and regulatory claims require the relevant external evaluation; they are not inferred from tests or architectural intent.
 
+### Shared evaluation resources
+
+- [Cross-portfolio benchmark programme](https://github.com/Luminous-Dynamics/.github/blob/main/benchmarks/README.md) — workload-specific baselines, correctness gates, negative controls, and reporting requirements.
+- [Luminous Evidence Result Profile 0.1](https://github.com/Luminous-Dynamics/.github/tree/main/standards/evidence/v0.1) — an experimental, interoperable result-predicate proposal designed to reuse in-toto/SLSA and domain standards rather than replace them.
+
+These are drafts and evaluation plans, not certifications or claims that all projects already emit compliant evidence packages.
+
 ## Collaboration
 
 We welcome technically grounded contributions, independent benchmark reproduction, research collaboration, design partners, and deployment feedback.
