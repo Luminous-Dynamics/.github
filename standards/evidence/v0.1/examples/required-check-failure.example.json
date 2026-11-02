@@ -1,6 +1,6 @@
 {
   "profile": "https://github.com/Luminous-Dynamics/.github/blob/main/standards/evidence/v0.1/README.md",
-  "claim": "A deliberately invalid authorization request is rejected by policy.",
+  "claim": "The system was evaluated against a request without a valid authorization receipt.",
   "subject": [
     {
       "name": "example-host-change",
@@ -31,15 +31,26 @@
       "result": "FAIL",
       "required": true,
       "verifier": "policy-negative-control",
-      "reason": "Illustrative negative-control fixture: this example represents an observed denial check failure only when result is interpreted as the tested system failing the expected deny behavior."
+      "reason": "The request was accepted, although the negative-control policy required denial.",
+      "observed": "The unauthorized mutation request was accepted."
+    },
+    {
+      "id": "replay-control",
+      "method": "Replay a previously used authorization receipt and verify that the second use is rejected.",
+      "result": "NOT_RUN",
+      "required": true,
+      "verifier": "policy-negative-control",
+      "reason": "The replay-control case was not executed in this example run."
     }
   ],
   "limitations": [
-    "Fixture semantics must be refined by domain-specific test policy; check result reports the actual check outcome, not the expected outcome."
+    "Illustrative failure fixture only; no live system or real host mutation is asserted.",
+    "The fixture demonstrates that a required negative control can fail while another required check remains not run."
   ],
   "conclusion": {
     "status": "FAIL",
-    "summary": "The example run is classified as failed because a required negative-control check failed.",
-    "scope": "One authorization negative-control test only."
+    "summary": "The example system accepted an unauthorized request, so a required denial check failed. A second required control was not run.",
+    "scope": "One authorization negative-control test only.",
+    "policy": "Any failed required check makes the overall result FAIL; a required check that is not run cannot be treated as passing."
   }
 }
