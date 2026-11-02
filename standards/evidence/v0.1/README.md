@@ -111,6 +111,7 @@ LEP's common envelope is intentionally small. Domain-specific profiles should be
 - **Distributed coordination:** agent count, topology, conductor versions, DHT/consistency conditions, revocation and restart tests, adversarial peers, and privacy boundaries.
 - **Geospatial / digital twin:** source identifiers, licenses, observation time, CRS, transformations, spatial/temporal resolution, quality flags, lineage, and uncertainty.
 - **Infrastructure operations:** exact flake lock/revision, target identity, plan digest, authorization receipt, snapshot, action log, post-state digest, and recovery evidence.
+- **Agentic IT operations:** the detailed [ITOPS Autonomy Boundary episode result](https://github.com/Luminous-Dynamics/luminous-platform/tree/main/benchmarks/itops-autonomy-boundary-v0.1) remains a specialized predicate with its own oracle and authorization semantics. LEP MAY wrap or reference it, but MUST NOT flatten away the attempt ledger, independent service observation, or runtime-gate evidence.
 
 ## 8. Compatibility and standards mapping
 
